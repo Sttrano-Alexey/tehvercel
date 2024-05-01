@@ -18,6 +18,10 @@ const ProductList = () => {
   const [selectedBrands, setSelectedBrands] = useState([]); // выбранные бренды
   const [selectedCategories, setSelectedCategories] = useState([]); // выбранные категории
 
+  const [priceFilterVisible, setPriceFilterVisible] = useState(false)
+  const [brandFilterVisible, setbrandFilterVisible] = useState(false)
+  const [categoryFilterVisible, setCategoryFilterVisible] = useState(false)
+
   useEffect(() => {
     fetch("https://raw.githubusercontent.com/Sttrano-Alexey/tehvercel/main/src/DATA/products.json")
       .then((res) => res.json())
@@ -80,9 +84,6 @@ const ProductList = () => {
     setVisibleProducts(6); // Сбрасываем количество видимых продуктов
   };
 
-  const [priceFilterVisible, setPriceFilterVisible] = useState(false)
-  const [brandFilterVisible, setbrandFilterVisible] = useState(false)
-  const [categoryFilterVisible, setCategoryFilterVisible] = useState(false)
 
   return (
     <>

@@ -4,7 +4,6 @@ import search from '../Images/Icons/search.svg'
 import CatalogMain from '../Catalog/CatalogMain'
 import React, { useState } from 'react'
 import { useEffect } from 'react'
-import MobileSearch from '../MobileSearch/MobileSearch'
 import { useContext } from 'react';
 import { CatalogContext } from '../../components/Catalog/CatalogContext';
 
@@ -25,6 +24,13 @@ export default function Header(){
         setSearchOpen(!isSearchOpen)
     }
     
+        const searchProducts = (event) => {
+            event.preventDefault();
+            const searchQuery = event.target.search.value;
+            window.location.href = `/products?search=${searchQuery}`;
+        }
+
+
         const goToCartPage = () => {
             const currentUrl = window.location.href;
             const previousUrl = localStorage.getItem('previousUrl');
@@ -77,7 +83,7 @@ export default function Header(){
                 Каталог
             </button>
             <div className="header__search">
-                <form className="header__search-form" action="/search" method="get">
+                <form className="header__search-form" action="/products" method="get" onSubmit={searchProducts}>
                     <input className="header__search-input" type="text" placeholder="Искать товары" name="search"/>
                     <input className="header__search-icon" type="image" src={search} onClick={searchOpen} alt="Поиск" />
                 </form>
@@ -88,7 +94,6 @@ export default function Header(){
                     <path d="M14.0097 24.0003C14.0097 25.1048 13.123 26.0003 12.0291 26.0003C10.9353 26.0003 10.0485 25.1048 10.0485 24.0003C10.0485 22.8957 10.9353 22.0003 12.0291 22.0003C13.123 22.0003 14.0097 22.8957 14.0097 24.0003Z" fill="#1E1E1E"/>
                     <path d="M22.9223 24.0003C22.9223 25.1048 22.0356 26.0003 20.9417 26.0003C19.8479 26.0003 18.9612 25.1048 18.9612 24.0003C18.9612 22.8957 19.8479 22.0003 20.9417 22.0003C22.0356 22.0003 22.9223 22.8957 22.9223 24.0003Z" fill="#1E1E1E"/>
                 </svg>
-
                 </button>
             </div>
         </div>
