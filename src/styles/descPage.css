@@ -1,5 +1,5 @@
 .description{
-    height: 76vh;
+    flex: 1 1 auto;
 }
 .description__container{
     display: flex;
