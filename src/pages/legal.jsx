@@ -1,7 +1,7 @@
 import '../styles/descPage.css'
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer"
-import delivery from '../components/Images/img/delivery.jpg'
+import legal from '../components/Images/img/legal.jpg'
 
 export default function Legal(){
     return(
@@ -22,7 +22,7 @@ export default function Legal(){
                     </div> 
                 </div>
                 <div class="description__column">
-                    <img src={delivery} alt="" class="description__column-img"/>
+                    <img src={legal} alt="" class="description__column-img"/>
                 </div>
             </div>
         </section>

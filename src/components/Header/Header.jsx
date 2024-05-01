@@ -62,10 +62,10 @@ export default function Header(){
                 <ul className="header__menu-list">
                     <li className="header__menu-item"><a href="delivery" className="header__menu-link">Доставка</a></li>
                     <li className="header__menu-item"><a href="legal" className="header__menu-link">Юр. Лицам</a></li>
-                    <li className="header__menu-item"><a href="payment.html" className="header__menu-link">Оплата</a></li>
-                    <li className="header__menu-item"><a href="safeguard.html" className="header__menu-link">Гарантия</a></li>
-                    <li className="header__menu-item"><a href="about.html" className="header__menu-link">О нас</a></li>
-                    <li className="header__menu-item"><a href="contacts.html" className="header__menu-link">Контакты</a></li>
+                    <li className="header__menu-item"><a href="pay" className="header__menu-link">Оплата</a></li>
+                    <li className="header__menu-item"><a href="safeguard" className="header__menu-link">Гарантия</a></li>
+                    <li className="header__menu-item"><a href="about" className="header__menu-link">О нас</a></li>
+                    <li className="header__menu-item"><a href="contacts" className="header__menu-link">Контакты</a></li>
                 </ul>
             </nav>
             <div className="header__contact">
