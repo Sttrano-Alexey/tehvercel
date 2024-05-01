@@ -6,7 +6,7 @@ import slide4 from './headSlides/head-slide4.jpg'
 import slide5 from './headSlides/head-slide5.jpg'
 import slide6 from './headSlides/head-slide6.jpg'
 // import Swiper core and required modules
-
+import { useEffect } from 'react'
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -14,35 +14,41 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/bundle'
 import './slider.css'
 export default function HeadSlider(){
-  let head__img = new Swiper('.head__slider', {
-    loop: true,
-    navigation: {
+  useEffect(() => {
+    let head__img = new Swiper('.head__slider', {
+      loop: true,
+      navigation: {
         prevEl: '.head__slider-prev',
         nextEl: '.head__slider-next'
-    },
-    pagination: {
+      },
+      pagination: {
         el: '.head__subslider-pagination',
         clickable: true
       },
-    autoplay: {
-      delay: 1500,
-      speed: 5000,
-      disableOnInteraction: true,
-    },
-});
+      autoplay: {
+        delay: 1500,
+        speed: 5000,
+        disableOnInteraction: true,
+      },
+    });
+    if (head__img) console.log('head__img slider initialized')
 
 
-let head__text = new Swiper('.head__subslider', {
-    loop: true,
-    spaceBetween: 24,
-    // navigation: {
-    //     prevEl: '.categories__slider-prev',
-    //     nextEl: '.categories__slider-next'
-    // },
-});
+    let head__text = new Swiper('.head__subslider', {
+      loop: true,
+      spaceBetween: 24,
+      // navigation: {
+      //     prevEl: '.categories__slider-prev',
+      //     nextEl: '.categories__slider-next'
+      // },
+    });
+    if (head__text) console.log('head__text slider initialized')
 
-head__img.controller.control = head__text;
-head__text.controller.control = head__img;
+
+    head__img.controller.control = head__text;
+    head__text.controller.control = head__img;
+  }, []);
+
   return (
     <div className="head__sliders">
       <div className="head__slider swiper-container">
