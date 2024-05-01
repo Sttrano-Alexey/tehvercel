@@ -1,5 +1,7 @@
 import './TabsMobile.css'
 import React, { useState } from 'react'
+import mail from '../Images/UI/mail.svg'
+import phone from '../Images/UI/phone.svg'
 
 export default function TabsMobile() {
 
@@ -40,20 +42,75 @@ export default function TabsMobile() {
             },
             {
               title: 'О нас',
-              content: '3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, doloremque!'
+              content: (
+                <>
+                <p>Команда «ТехПо» успешно работает в сфере поставок IT оборудования <span className="red">более 8 лет</span></p>
+                <p>Наши основные преимущества:</p>
+                <p>Приятная цена</p>
+                <p>Удобная доставка</p>
+                <p>На рынке с 2015 года</p>
+                <p>Широкий ассортимент товаров</p>
+                </>
+              )
             },
             {
               title: 'Юридическим лицам',
-              content: '4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, nostrum!'
+              content: (
+                <>
+                <p><strong>Условия сотрудничества</strong></p>
+                <p>Все цены на товары включают НДС 20%. </p>
+                <p>Документы на товар можно получить по ЭДО («Контур Диадок»), почтой или вместе с товаром.</p>
+                <p>При оформлении заказа выберите способ оплаты «Счёт на оплату», <br /> Укажите ваши реквизиты и выберите способ доставки.  <br />
+                Отправка товара ТК осуществляется после получения оплаты.</p>
+                <p>Если вам нужен договор поставки, то вы можете обратиться по телефону или на почту <a className='red' href="mailto:1@techpo.ru">1@techpo.ru.</a></p>
+                </>
+              )
             },
             {
               title: 'Оплата',
-              content: ' 5Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, atque!'
+              content: (
+                <>
+                <p>Оплата товара производится предварительно и полностью одним из доступных способов</p>
+                <p>C помощью QR-кода</p>
+                <p>по выставленному счету</p>
+                <span>
+                  Условия оплаты могут быть изменены менеджером по согласованию с клиентом.
+                </span>
+                </>
+              )
             }
             ,
             {
               title: 'Контакты',
-              content: ' 5Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, atque!'
+              content:(
+                <>
+                  <p><strong>Юридический адрес:</strong></p>
+                  <p>248010, Калужская обл, <br /> г Калуга, ул Высокая, д. 2а, кв. 114</p>
+                  <p><strong>Реквизиты</strong></p>
+                  <div className='tabs-contacts'>
+                    <span>ООО "АРМАДА"</span>
+                    <span>ИНН: 4028073447</span>
+                    <span>КПП: 402801001</span>
+                    <span>ОГРН: 1224000008957</span>
+                    <span>Расчетный счет:</span>
+                    <span>40702810822240010228</span>
+                    <span>Банк:</span>
+                    <span>КАЛУЖСКОЕ ОТДЕЛЕНИЕ N8608 ПАО СБЕРБАНК</span>
+                    <span>БИК: 042908612</span>
+                    <span>Корр. счет: 30101810100000000612</span>
+                  </div>                      
+                  <div className="tabs-contacts-link">
+                  <div className='tabs-contacts-link-item'>
+                      <img src={phone} alt="" />
+                      <a href="tel:8-910-00-00" className="description__column-a">8-910-00-00</a>
+                  </div>
+                  <div className='tabs-contacts-link-item'>
+                      <img src={mail} alt="" />
+                      <a href="mailto:1@techpo.ru" className="description__column-a">1@techpo.ru</a>
+                  </div> 
+                  </div>
+                </>
+              )
             }
           ].map((item, index) => (
             <div key={index} className="tabs-item">
