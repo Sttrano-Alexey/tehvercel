@@ -47,9 +47,8 @@ const CatalogMain = () => {
   };
 
   return (
-    isCatalogOpen && (
     <>
-      <div className="catalog">
+      <div className={isCatalogOpen ? "catalog active" : "catalog"}>
         <div className="catalog__container container">
           <div className="popup-catalog">
             <div className="catalog-categories">
@@ -164,7 +163,6 @@ const CatalogMain = () => {
       </div>
     </>
     )
-  );
 };
 
 export default CatalogMain;

@@ -1,12 +1,20 @@
 .catalog{
   background-color: #292929;
   position: fixed;
-  top: 126px;
+  top: 156px;
   left: 0;
   width: 100vw;
   height: calc(100vh - 126px);
   z-index: 999;
   overflow-y: scroll;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s
+}
+.catalog.active{
+  top: 126px;
+  opacity: 1;
+  pointer-events: all;
 }
 .catalog__container{
   margin-bottom: 32px !important;
@@ -100,9 +108,12 @@
     flex-direction: column;
   }
   .catalog{
-    top: 77px;
+    top: 97px;
     height: calc(100vh - 77px);
     background-color: #fff;
+  }
+  .catalog.active{
+    top: 77px;
   }
   .catalog-categories{
     width: 100%;
