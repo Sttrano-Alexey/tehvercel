@@ -25,11 +25,11 @@ export default function HeadSlider(){
         el: '.head__subslider-pagination',
         clickable: true
       },
-      autoplay: {
-        delay: 1500,
-        speed: 5000,
-        disableOnInteraction: true,
-      },
+      // autoplay: {
+      //   delay: 1500,
+      //   speed: 5000,
+      //   disableOnInteraction: true,
+      // },
     });
     if (head__img) console.log('head__img slider initialized')
 

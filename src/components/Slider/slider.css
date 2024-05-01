@@ -1,22 +1,3 @@
-/* .head__sliders{
-    max-width: 963px;
-    border-radius: 20px;
-    position: relative;
-}
-.head__slider{
-    max-width: 963px;
-}
-.head-slider__pagination-message{
-    color: red;
-    position: relative;
-    z-index: 999;
-}
-.head__subslider{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-} */
 
 .head__sliders{
     position: relative;
