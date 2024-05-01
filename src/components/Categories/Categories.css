@@ -68,3 +68,8 @@
 .categories-slider-nav svg{
     cursor: pointer;
 }
+@media (max-width: 1100px) {
+    .categories-slider-slide-container p{
+        font-size: 24px;
+    }
+}

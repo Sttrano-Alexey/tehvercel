@@ -18,8 +18,16 @@ export default function Categories(){
     useEffect(() => {
         var categories__slider = new Swiper('.categories__slider-container', {
             loop: true,
-            slidesPerView: 3,
-            spaceBetween: 24,
+            breakpoints: {
+                765: {
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                },
+                800: {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                },
+            },
             navigation: {
                 prevEl: '.categories__slider-prev',
                 nextEl: '.categories__slider-next'
