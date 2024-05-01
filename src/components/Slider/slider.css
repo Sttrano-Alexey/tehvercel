@@ -23,7 +23,7 @@
 }
 .head__slider{
     height: 338px;
-    width: 100%;
+    max-width: 963px;
     background-color: #1e1e1e;
     border-radius: 20px;
     overflow: hidden;
