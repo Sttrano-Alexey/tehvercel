@@ -6,6 +6,7 @@ import Cart from './pages/Cart'
 import ProductsInfo from './pages/ProductsInfo'
 import './styles/load.css'
 import CatalogMain from './components/Catalog/CatalogMain'
+import Legal from './pages/legal'
 function App() {
 
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route index element={<Home/>}/>
         <Route path="/index.html" element={<Home/>}/>
         <Route path="/delivery" element={<Delivery/>}/>
+        <Route path="/legal" element={<Legal/>}/>
         <Route path="/products" element={<ProductList/>}/>
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/info_products/:productId" element={<ProductsInfo/>}/>

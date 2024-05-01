@@ -2,7 +2,6 @@ import Header from "../components/Header/Header";
 import '../styles/descPage.css'
 import delivery from '../components/Images/img/delivery.jpg'
 import Footer from "../components/Footer/Footer"
-import CatalogMain from "../components/Catalog/CatalogMain";
 
 export default function Delivery(){
     return(
