@@ -9,7 +9,7 @@ export default function Footer(){
         <footer className="footer">
             <div className="footer__container container">
                 <div className="footer__logo">
-                    <img src={logo} alt="" className="footer__logo-img" />
+                    <a href="/"><img src={logo} alt="" className="footer__logo-img" /></a>
                 </div>
                 <nav className="footer__menu">
                     <ul className="footer__menu-list">
