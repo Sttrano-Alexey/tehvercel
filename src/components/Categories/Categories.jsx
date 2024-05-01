@@ -32,9 +32,9 @@ export default function Categories(){
     return(
         <>
             <section className='categories'>
-                <div className="categories__container container">
+                <div className="categories__container container-long">
                     <h2 className="categories__title-main">Популярные категории</h2>
-                    <div className="categories__slider-container swiper">
+                    <div className="categories__slider-container container swiper">
                         <div className="categories__slider-wrapper swiper-wrapper">
                             <div className="categories-slider-slide swiper-slide">
                                 <div className="categories-slider-slide-container">
@@ -93,6 +93,16 @@ export default function Categories(){
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div className="categories-slider-nav">
+                        <svg className='categories__slider-prev' width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="22" cy="22" r="22" fill="#A8B3C0" fillOpacity="0.5"/>
+                            <path d="M25 10L13 22L25 34" stroke="white" strokeWidth="4" strokeLinecap="round"/>
+                        </svg>
+                        <svg className="categories__slider-next" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="22" cy="22" r="22" transform="rotate(-180 22 22)" fill="#A8B3C1" fillOpacity="0.5"/>
+                            <path d="M19 34L31 22L19 10" stroke="white" strokeWidth="4" strokeLinecap="round"/>
+                        </svg>
                     </div>
                 </div>
             </section>

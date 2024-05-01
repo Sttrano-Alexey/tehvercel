@@ -29,7 +29,7 @@
     object-fit: cover;
     position: relative;
 }
-.head__slider-prev, .head__slider-next, .categories__slider-prev, .categories__slider-next{
+.head__slider-prev, .head__slider-next{
     display: inline-block;
     width: 44px;
     height: 44px;
