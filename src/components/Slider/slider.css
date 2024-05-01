@@ -1,9 +1,92 @@
-.head-slider{
-    width: 100%;
+/* .head__sliders{
+    max-width: 963px;
     border-radius: 20px;
+    position: relative;
+}
+.head__slider{
+    max-width: 963px;
 }
 .head-slider__pagination-message{
     color: red;
     position: relative;
     z-index: 999;
+}
+.head__subslider{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+} */
+
+.head__sliders{
+    position: relative;
+}
+.head__slider{
+    height: 338px;
+    width: 100%;
+    background-color: #1e1e1e;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.head__slider-content{
+    width: 100%;
+    height: 100%;
+}
+.head__slider-overlay{
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to top, rgba(30, 30, 30, 0.9), rgba(30, 30, 30, 0));
+    z-index: 10;
+}
+.head__slider-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+.head__slider-prev, .head__slider-next, .categories__slider-prev, .categories__slider-next{
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 10;
+    cursor: pointer;
+}
+.swiper-pagination-bullet{
+    width: 24px;
+    height: 24px;
+    background-color: #DBC2A4;
+    opacity: 1;
+    z-index: 12;
+}
+.swiper-pagination-bullet-active{
+    background-color: #C91111;
+}
+.head__slider-prev{
+    left: 50px;
+}
+.head__slider-next{
+    right: 50px;
+}
+.head__subslider{
+    height: 88px;
+    width: 221px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 44px;
+    right: 71px;
+}
+.head__subslider-text{
+    position: absolute;
+    z-index: 11;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    padding-left: 16px;
 }
