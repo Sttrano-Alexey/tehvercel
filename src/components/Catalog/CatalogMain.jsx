@@ -4,6 +4,7 @@ import Footer from '../Footer/Footer'
 import { useContext } from 'react';
 import catalogData from '../../DATA/catalog.json';
 import { CatalogContext } from '../../components/Catalog/CatalogContext';
+import { useEffect } from 'react';
 
 const CatalogMain = () => {
   const categories = React.useMemo(() => catalogData, []); // JSON.parse(catalogData); // в webpack.config.js указан loader "json-loader" => можно использовать imported JSON как есть
@@ -45,6 +46,16 @@ const CatalogMain = () => {
           document.querySelector('body').classList.remove('lock')
     }
   };
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape' && isCatalogOpen) {
+        handleCloseCatalogButtonClick();
+      }
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [isCatalogOpen, handleCloseCatalogButtonClick]);
+
 
   return (
     <>
@@ -160,6 +171,7 @@ const CatalogMain = () => {
           </div>
         </div>
         <Footer></Footer>
+        <div className="catalog-bg" onClick={handleCloseCatalogButtonClick}></div>
       </div>
     </>
     )

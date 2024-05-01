@@ -3,9 +3,6 @@
         display: none;
     }
 }
-.appliances{
-    margin-bottom: 12px;
-}
 .appliances__container{
     max-width: 1113px;
     display: flex;
