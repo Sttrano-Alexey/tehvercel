@@ -6,49 +6,29 @@ import advImg4 from './AdvantagesImage/support_adv.svg'
 import advImg5 from './AdvantagesImage/trolley_adv.svg'
 import advImg6 from './AdvantagesImage/truck_adv.svg'
 
-export default function Advantages(){
-    return(
-        <>
-            <section className='advantages'>
-                <div className="advantages__container container">
-                    <div className="advantages__item">
-                        <img src={advImg3} alt="" />
-                        <p>
-                            2 способа оплаты QR-код выставленный счет
-                        </p>
+export default function Advantages({ images, texts }) {
+    return (
+        <section className='advantages'>
+            <div className="advantages__container container">
+                {images.map((image, index) => (
+                    <div className="advantages__item" key={index}>
+                        <img src={image} alt="" />
+                        <p>{texts[index]}</p>
                     </div>
-                    <div className="advantages__item">
-                        <img src={advImg1} alt="" />
-                        <p>
-                            Более 8 лет на рынке IT  оборудования
-                        </p>
-                    </div>
-                    <div className="advantages__item">
-                        <img src={advImg2} alt="" />
-                        <p>
-                            Гарантия на товар и удобные условия возарата
-                        </p>
-                    </div>
-                    <div className="advantages__item">
-                        <img src={advImg6} alt="" />
-                        <p>
-                            Доставка осуществляется компанией СДЭК
-                        </p>
-                    </div>
-                    <div className="advantages__item">
-                        <img src={advImg4} alt="" />
-                        <p>
-                            Консультация и помощь от наших менеджеров
-                        </p>
-                    </div>
-                    <div className="advantages__item">
-                        <img src={advImg5} alt="" />
-                        <p>
-                            Большой ассортимент товара
-                        </p>
-                    </div>
-                </div>
-            </section>
-        </>
+                ))}
+            </div>
+        </section>
     )
+}
+
+Advantages.defaultProps = {
+    images: [advImg3, advImg1, advImg2, advImg6, advImg4, advImg5],
+    texts: [
+        '2 способа оплаты QR-код выставленный счет',
+        'Более 8 лет на рынке IT  оборудования',
+        'Гарантия на товар и удобные условия возарата',
+        'Доставка осуществляется компанией СДЭК',
+        'Консультация и помощь от наших менеджеров',
+        'Большой ассортимент товара'
+    ]
 }
