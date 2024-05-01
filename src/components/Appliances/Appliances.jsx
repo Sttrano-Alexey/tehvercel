@@ -48,7 +48,7 @@ export default function Appliances(){
         <>
             <section className='appliances'>
                 <div className="appliances__container container">
-                    <h2 className='categories__title-main'>Бытовая техника</h2>
+                    <h2 className='categories__title-main apl-title'>Бытовая техника</h2>
                 </div>
                 <div class="appliances__bg">
                     <div class="appliances__container container">

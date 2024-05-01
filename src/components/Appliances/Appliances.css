@@ -42,6 +42,10 @@
 .appliances__slider-img{
     border-radius: 168px;
 }
+.apl-title{
+    width: 100%;
+    text-align: center;
+}
 @media (max-width: 800px) {
     .appliances__slider-img{
         border-radius: 168px;
