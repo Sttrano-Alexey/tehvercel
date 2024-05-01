@@ -9,12 +9,14 @@
   overflow-y: scroll;
   opacity: 0;
   pointer-events: none;
-  transition: 0.2s
+  transition: 0.2s;
+  transform: scale(0.8);
 }
 .catalog.active{
   top: 126px;
   opacity: 1;
   pointer-events: all;
+  transform: scale(1);
 }
 .catalog__container{
   margin-bottom: 32px !important;

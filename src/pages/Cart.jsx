@@ -192,7 +192,7 @@ export default function Cart(){
                     {cartItems.length === 0 ? (
                         <></>
                         ):
-                        <div className="cart__mainColumn">
+                        <div className="cart__mainColumn cart__mainColumn-fix">
                             <div className="order-item-container">
                                 <div className="order__items">
                                     <div className="order__item"><span>{cartItems.length} товара</span><span>{new Intl.NumberFormat('ru-RU').format(totalSum)} ₽</span></div>
