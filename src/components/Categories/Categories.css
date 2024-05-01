@@ -3,6 +3,21 @@
         display: none;
     }
 }
+.categories-slider-slide{
+    cursor: pointer;
+}
+.categories-slider-slide img{
+    transition: all 0.2s ease;
+}
+.categories-slider-slide p{
+    transition: all 0.2s ease;
+}
+.categories-slider-slide:hover img{
+    transform: scale(1.1);
+}
+.categories-slider-slide:hover p{
+    transform: scale(0.95);
+}
 .categories-slider-slide img{
     width: 100%;
 }

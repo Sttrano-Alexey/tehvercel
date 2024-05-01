@@ -187,6 +187,7 @@
     justify-content: center;
     min-height: 300px;
     flex-direction: column-reverse;
+    text-align: center;
 }
 .form-done img{
     margin-bottom: 32px;

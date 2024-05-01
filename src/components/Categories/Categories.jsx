@@ -7,10 +7,14 @@ import slide_c5 from '../Images/img/laptop5.png'
 import slide_c6 from '../Images/img/laptop6.png'
 import slide_c7 from '../Images/img/laptop7.png'
 import slide_c8 from '../Images/img/laptop8.png'
+import { useNavigate } from 'react-router-dom';
+
 
 import { useEffect } from 'react';
 
 export default function Categories(){
+    const navigate = useNavigate();
+
     useEffect(() => {
         var categories__slider = new Swiper('.categories__slider-container', {
             loop: true,
@@ -28,7 +32,6 @@ export default function Categories(){
         });
     }, []); // [] - для инициализации только при первом рендере
 
-
     return(
         <>
             <section className='categories'>
@@ -36,56 +39,56 @@ export default function Categories(){
                     <h2 className="categories__title-main">Популярные категории</h2>
                     <div className="categories__slider-container container swiper">
                         <div className="categories__slider-wrapper swiper-wrapper">
-                            <div className="categories-slider-slide swiper-slide">
+                            <div className="categories-slider-slide swiper-slide"  onClick={() => navigate(`/products?category=${'Телевизоры'}`)}>
                                 <div className="categories-slider-slide-container">
                                     <img src={slide_c1} alt="" />
                                     <p>Телевизоры</p>
                                     <div className='bg'></div>
                                 </div>
                             </div>
-                            <div className="categories-slider-slide swiper-slide">
+                            <div className="categories-slider-slide swiper-slide" onClick={() => navigate(`/products?category=${'Смартфоны'}`)}>
                                 <div className="categories-slider-slide-container">
                                     <img src={slide_c2} alt="" />
                                     <p>Смартфоны</p>
                                     <div className='bg'></div>
                                 </div>
                             </div>
-                            <div className="categories-slider-slide swiper-slide">
+                            <div className="categories-slider-slide swiper-slide" onClick={() => navigate(`/products?category=${'Ноутбуки'}`)}>
                                 <div className="categories-slider-slide-container">
                                     <img src={slide_c3} alt="" />
                                     <p>Ноутбуки</p>
                                     <div className='bg'></div>
                                 </div>
                             </div>
-                            <div className="categories-slider-slide swiper-slide">
+                            <div className="categories-slider-slide swiper-slide" onClick={() => navigate(`/products?category=${'Компьютеры'}`)}>
                                 <div className="categories-slider-slide-container">
                                     <img src={slide_c4} alt="" />
                                     <p>Компьютеры</p>
                                     <div className='bg'></div>
                                 </div>
                             </div>
-                            <div className="categories-slider-slide swiper-slide">
+                            <div className="categories-slider-slide swiper-slide" onClick={() => navigate(`/products?category=${'Бытовая техника'}`)}>
                                 <div className="categories-slider-slide-container">
                                     <img src={slide_c5} alt="" />
                                     <p>Бытовая техника</p>
                                     <div className='bg'></div>
                                 </div>
                             </div>
-                            <div className="categories-slider-slide swiper-slide">
+                            <div className="categories-slider-slide swiper-slide" onClick={() => navigate(`/products?category=${'Сетевое оборудование'}`)}>
                                 <div className="categories-slider-slide-container">
                                     <img src={slide_c6} alt="" />
                                     <p>Сетевое оборудование</p>
                                     <div className='bg'></div>
                                 </div>
                             </div>
-                            <div className="categories-slider-slide swiper-slide">
+                            <div className="categories-slider-slide swiper-slide" onClick={() => navigate(`/products?category=${'Офисное оборудование'}`)}>
                                 <div className="categories-slider-slide-container">
                                     <img src={slide_c7} alt="" />
                                     <p>Офисное оборудование</p>
                                     <div className='bg'></div>
                                 </div>
                             </div>
-                            <div className="categories-slider-slide swiper-slide">
+                            <div className="categories-slider-slide swiper-slide" onClick={() => navigate(`/products?category=${'Ручной инструмент'}`)}>
                                 <div className="categories-slider-slide-container">
                                     <img src={slide_c8} alt="" />
                                     <p>Ручной инструмент</p>
