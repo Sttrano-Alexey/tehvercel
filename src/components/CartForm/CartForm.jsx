@@ -1,5 +1,6 @@
 import "./CartForm.css";
 import React, { useRef, useState } from "react";
+import doneImg from '../Images/Icons/formDone.png'
 
 export default function CartForm() {
   const [isPhysicalLegal, setIsPhysicalLegal] = useState(true);
@@ -171,7 +172,7 @@ export default function CartForm() {
   <div key="payment-form">
     <h3 className="form-title end">Оплата</h3>
           <div className="form-row pay-row">
-            <div className="form-column spb-column">
+            <div className="form-column ">
               <form action="" className="form-form">
                 <span className="form-subtitle ">
                   СПБ
@@ -194,6 +195,7 @@ export default function CartForm() {
     <div key="done-form">
       <div className="form-done">
             <h3 className="form-title end">К оформлению заказа все готово</h3>
+            <img src={doneImg} alt="" />
       </div>
   </div> 
   ];
@@ -223,23 +225,21 @@ export default function CartForm() {
         >
           Назад
         </button>
-        <span className="CartForm__navigation-counter">
-          {currentFormIndex + 1} из {totalFormsCount}
-        </span>
         {currentFormIndex === totalFormsCount - 1 ? (
-          <button
-            className="CartForm__navigation-btn CartForm__navigation-btn--order"
-          >
-            Оформить заказ
-          </button>
+          <></>
         ) : (
-          <button
-            className="CartForm__navigation-btn"
-            onClick={handleNextBtnClick}
-            disabled={currentFormIndex === totalFormsCount - 1}
-          >
-            Далее
-          </button>
+          <>
+            <span className="CartForm__navigation-counter">
+              {currentFormIndex + 1} из {totalFormsCount}
+            </span>
+            <button
+              className="CartForm__navigation-btn"
+              onClick={handleNextBtnClick}
+              disabled={currentFormIndex === totalFormsCount - 1}
+            >
+              Далее
+            </button>
+          </>
         )}
       </nav>
     </div>

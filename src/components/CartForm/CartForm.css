@@ -4,9 +4,8 @@
 .CartForm__container{
     margin-top: 32px;
     padding-top: 30px;
-    border-top: 1px solid #d4d4d46b;
-    border-right: 1px solid #d4d4d46b;
-    background-color: #E7E7E7;
+    border: 1px solid #d4d4d4;
+    background-color: #ffffff;
     padding: 32px;
     border-radius: 20px;
     margin-bottom: 32px;
@@ -187,6 +186,10 @@
     align-items: center;
     justify-content: center;
     min-height: 300px;
+    flex-direction: column-reverse;
+}
+.form-done img{
+    margin-bottom: 32px;
 }
 .pay-row{
     margin-bottom: 128px;
