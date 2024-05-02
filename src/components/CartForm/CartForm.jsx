@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react";
 import doneImg from '../Images/Icons/formDone.png'
 
 export default function CartForm() {
+  // проверка чекбоксов для юр физ лица
   const [isPhysicalLegal, setIsPhysicalLegal] = useState(true);
 
   const handlePhizCheckboxChange = () => {
@@ -12,8 +13,31 @@ export default function CartForm() {
   const handleLegalCheckboxChange = () => {
     setIsPhysicalLegal(false);
   };
+
+  // проверка чекбоксов для пунктов заказа
+
+  const [isDevileryPlace, setDevileryPlace] = useState(true);
+  const handleDeliveryCheckboxChange = () => {
+    setDevileryPlace(false);
+  };
+  const handlePlaceCheckboxChange = () => {
+    setDevileryPlace(true);
+  };
+
+  // проверка чекбоксов для выбора способа оплаты
+
+  const [isSpbCheck, setSpbCheck] = useState(true);
+  const handleSpbCheckboxChange = () => {
+    setSpbCheck(true);
+  };
+  const handleCheckCheckboxChange = () => {
+    setSpbCheck(false);
+  };
+
   
   const [currentFormIndex, setCurrentFormIndex] = useState(0);
+
+  
   const forms = [
     <div key="phiz-form">
       <h3 className="form-title">Оформление заказа</h3>
@@ -121,9 +145,14 @@ export default function CartForm() {
                   <form action="" className="phiz-form form-form">
                     <span className="form-subtitle">
                       Пункт выдачи{" "}
-                      <input type="checkbox" className="form-checkbox" />
+                      <input
+                      type="checkbox"
+                      className="form-checkbox" 
+                      onChange={handlePlaceCheckboxChange}
+                      checked={isDevileryPlace}
+                      />
                     </span>
-                    <div className="delivery-map">
+                    <div className={isDevileryPlace ? "delivery-map" : "delivery-map hidden"}>
                       <button type="button" className="map-btn" onClick={() => {
                         const mapBlock = document.querySelector('.map');
                         mapBlock.classList.toggle('hidden');
@@ -140,28 +169,37 @@ export default function CartForm() {
                   <form action="" className="phiz-form form-form">
                     <span className="form-subtitle">
                       Курьером
-                      <input type="checkbox" className="form-checkbox" />
+                      <input
+                      type="checkbox"
+                      className="form-checkbox"
+                      onChange={handleDeliveryCheckboxChange}
+                      checked={!isDevileryPlace}
+                      />
                     </span>
                     <label className="form-label">Мой адрес</label>
                     <input
                       type="text"
                       className="form-input"
                       placeholder="Введите значение"
+                      disabled={isDevileryPlace}
                     />
                     <input
                       type="email"
                       className="form-input"
                       placeholder="Дом"
+                      disabled={isDevileryPlace}
                     />
                     <input
                       type="tel"
                       className="form-input"
                       placeholder="Подъезд"
+                      disabled={isDevileryPlace}
                     />
                     <input
                       type="tel"
                       className="form-input"
                       placeholder="Квартира"
+                      disabled={isDevileryPlace}
                     />
                   </form>
                 </div>
@@ -176,18 +214,28 @@ export default function CartForm() {
               <form action="" className="form-form">
                 <span className="form-subtitle ">
                   СПБ
-                  <input type="checkbox" className="form-checkbox" />
+                  <input
+                  type="checkbox"
+                  className="form-checkbox" 
+                  onChange={handleSpbCheckboxChange}
+                  checked={isSpbCheck}
+                  />
                 </span>
-                <p>Поясняющий текст как в подробностях происходит оплата</p>
+                <p className={isSpbCheck ? "" : "hidden"}>Поясняющий текст как в подробностях происходит оплата</p>
               </form>
             </div>
             <div className="form-column legal-form-column">
               <form action="" className="form-form">
                 <span className="form-subtitle">
                   Выслать счёт
-                  <input type="checkbox" className="form-checkbox" />
+                  <input
+                  type="checkbox" 
+                  className="form-checkbox" 
+                  onChange={handleCheckCheckboxChange}
+                  checked={!isSpbCheck}
+                  />
                 </span>
-                <p>Поясняющий текст как в подробностях происходит оплата</p>
+                <p className={!isSpbCheck ? "" : "hidden"}>Поясняющий текст как в подробностях происходит оплата</p>
               </form>
             </div>
           </div>
