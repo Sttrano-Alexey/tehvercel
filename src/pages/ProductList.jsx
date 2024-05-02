@@ -24,7 +24,6 @@ const ProductList = () => {
   const [firstInputActive, setFirstInputActive] = useState(true); // Declare and initialize firstInputActive state
 
   useEffect(() => {
-    // fetch("../src/DATA/products.json")
     fetch("https://raw.githubusercontent.com/Sttrano-Alexey/tehvercel/main/src/DATA/products.json")
       .then((res) => res.json())
       .then((products) => {

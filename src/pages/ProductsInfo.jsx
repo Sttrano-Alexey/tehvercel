@@ -26,6 +26,7 @@ export default function ProductsInfo(){
     useEffect(() => {
         // Чтение файла products.json
         fetch('https://raw.githubusercontent.com/Sttrano-Alexey/tehvercel/main/src/DATA/products.json')
+        // fetch('../DATA/products.json')
             .then((response) => response.json())
             .then((data) => {
                 const product = data.find((item) => item.id === parseInt(productId)); // Парсим productId к числу, если необходимо
@@ -176,7 +177,7 @@ export default function ProductsInfo(){
                                         </button>
                                     </div>
                                     <div className="info-item-price">
-                                        {(productInfo.price.replace(/\s/g, '') * count).toLocaleString('ru') } <span> ₽</span>
+                                        {(productInfo.price * count).toLocaleString('ru') } <span> ₽</span>
                                     </div>
                                 </div>
                                 <div className="info-add-to-cart-buttons">
