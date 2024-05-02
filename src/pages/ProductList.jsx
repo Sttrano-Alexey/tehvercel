@@ -21,8 +21,10 @@ const ProductList = () => {
   const [priceFilterVisible, setPriceFilterVisible] = useState(false)
   const [brandFilterVisible, setbrandFilterVisible] = useState(false)
   const [categoryFilterVisible, setCategoryFilterVisible] = useState(false)
+  const [firstInputActive, setFirstInputActive] = useState(true); // Declare and initialize firstInputActive state
 
   useEffect(() => {
+    // fetch("../src/DATA/products.json")
     fetch("https://raw.githubusercontent.com/Sttrano-Alexey/tehvercel/main/src/DATA/products.json")
       .then((res) => res.json())
       .then((products) => {
@@ -84,6 +86,24 @@ const ProductList = () => {
     setVisibleProducts(6); // Сбрасываем количество видимых продуктов
   };
 
+  const handlePriceFilterToggle = () => {
+    setPriceFilterVisible(!priceFilterVisible);
+  };
+
+  const handlePriceFilterChange = (e) => {
+    const value = +e.target.value;
+    if (firstInputActive) {
+      if (value <= (priceFilterTo || Infinity)) {
+        setPriceFilterFrom(value);
+      }
+    } else {
+      if (value >= (priceFilterFrom || -Infinity)) {
+        setPriceFilterTo(value);
+      }
+    }
+  };
+
+  
 
   return (
     <>
@@ -101,31 +121,40 @@ const ProductList = () => {
                   </svg>
                 </button>
                 {priceFilterVisible && (
-                    <div className="price-filter">
-                    <div>
-                      <input
-                        type="number"
-                        placeholder="От"
-                        value={priceFilterFrom}
-                        onChange={(e) => setPriceFilterFrom(+e.target.value)}
-                      />
-                      <input
-                        type="number"
-                        placeholder="До"
-                        value={priceFilterTo}
-                        onChange={(e) => setPriceFilterTo(+e.target.value)}
-                      />
-                    </div>
-                    <input className="filter-range"
-                      type="range"
-                      min={0}
-                      max={100000}
-                      step={1000}
-                      value={priceFilterTo}
-                      onChange={(e) => setPriceFilterTo(+e.target.value)}
-                    />
-                  </div>
-                )}
+  <div className="price-filter">
+    <div>
+      <input
+        type="number"
+        placeholder="От"
+        value={priceFilterFrom !== 0 ? priceFilterFrom : ""}
+        onChange={handlePriceFilterChange}
+        onClick={() => setFirstInputActive(true)}
+      />
+      <input
+        type="number"
+        placeholder="До"
+        value={priceFilterTo !== 0 ? priceFilterTo : ""}
+        onChange={handlePriceFilterChange}
+        onClick={() => setFirstInputActive(false)}
+      />
+    </div>
+    <input
+      className="filter-range"
+      type="range"
+      min={0}
+      max={100000}
+      step={1000}
+      value={firstInputActive ? priceFilterFrom : priceFilterTo}
+      onChange={(e) => {
+        if (firstInputActive) {
+          setPriceFilterFrom(+e.target.value);
+        } else {
+          setPriceFilterTo(+e.target.value);
+        }
+      }}
+    />
+  </div>
+)}
               </div>
               <div className="filter-item">
                 <button onClick={() => setbrandFilterVisible(!brandFilterVisible)} className="filter-button">

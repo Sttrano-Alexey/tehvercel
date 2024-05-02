@@ -92,7 +92,7 @@ const Product = ({ product }) => {
           <div className="products__slider-item">
             <img src={product.img1} alt="" />
           </div>
-          <span className="product__price">{product.price} ₽</span>
+          <span className="product__price">{product.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} ₽</span>
           <Link  title={product.title} to={`/info_products/${product.id}`} className="products__titles">
             {product.title.length > 25
               ? product.title.slice(0, 25) + '...'

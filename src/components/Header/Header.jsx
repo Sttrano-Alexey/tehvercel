@@ -6,6 +6,7 @@ import React, { useState } from 'react'
 import { useEffect } from 'react'
 import { useContext } from 'react';
 import { CatalogContext } from '../../components/Catalog/CatalogContext';
+import MobileSearch from '../MobileSearch/MobileSearch'
 
 export default function Header(){
 
