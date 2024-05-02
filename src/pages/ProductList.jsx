@@ -141,7 +141,7 @@ const ProductList = () => {
       className="filter-range"
       type="range"
       min={0}
-      max={100000}
+      max={250000}
       step={1000}
       value={firstInputActive ? priceFilterFrom : priceFilterTo}
       onChange={(e) => {

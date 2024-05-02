@@ -57,7 +57,7 @@ export default function Cart(){
         localStorage.removeItem("cart"); // Удаляем корзину из localStorage
     };
 
-    const totalSum = cartItems.reduce((sum, item) => sum + (item.price.replace(/ /g, '') * 1) * item.count, 0);
+    const totalSum = cartItems.reduce((sum, item) => sum + (item.price * 1) * item.count, 0);
 
 
     return(
@@ -121,7 +121,7 @@ export default function Cart(){
                                             </td>
                                             <td className="item-cart-price">{item.price} ₽</td>
                                             <td className="item-cart-price x-summ">
-                                                {new Intl.NumberFormat('ru-RU').format(item.price.replace(/ /g, '') * item.count)} ₽
+                                                {new Intl.NumberFormat('ru-RU').format(item.price * item.count)} ₽
                                             </td>
                                             <td className="delete__cart-td" onClick={() => removeFromCart(index)}>
                                                 <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -166,7 +166,7 @@ export default function Cart(){
                                             {item.price} ₽
                                         </div>
                                         <div className="mob-item-price">
-                                            {new Intl.NumberFormat('ru-RU').format(item.price.replace(/ /g, '') * item.count)} ₽
+                                            {new Intl.NumberFormat('ru-RU').format(item.price * item.count)} ₽
                                         </div>
                                         <div className="mob-item-delete" onClick={() => removeFromCart(index)}>
                                         <svg width="38" height="32" viewBox="0 0 38 32" fill="none" xmlns="http://www.w3.org/2000/svg">
