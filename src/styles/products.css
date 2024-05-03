@@ -82,12 +82,13 @@
     border-radius: 20px;
     border: 1px solid #7e7e7e69;
     padding: 14px 18px;
-    max-height: 314px;
+    max-height: 338px;
 }
 .products__slider-item{
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 24px;
 }
 .product__item img{
     max-width: 125px;
