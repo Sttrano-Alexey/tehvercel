@@ -115,7 +115,7 @@
         "description": "8 [MNH73LL/A] silver M2 Pro 10C CPU 16C GPU/16GB/512GB SSD",
         "characteristic" : "Данная модель могла быть предварительно активирована. Является абсолютно новой, не проходила процедуру привязки аккаунта Apple ID. Обращаем ваше внимание, указанная выше информация не влияет на потребительские характеристики, функциональность и гарантию М.Видео. iPhone 13. Сильный мира всего.",
         "brand": "Apple",
-        "category": "Телефоны"
+        "category": "Смартфоны"
 
     },
     {
@@ -130,7 +130,7 @@
         "description": "9 [MNH73LL/A] silver M2 Pro 10C CPU 16C GPU/16GB/512GB SSD",
         "characteristic" : "Данная модель могла быть активирована до продажи без привязки к аккаунту Apple ID. Это не влияет на потребительские характеристики, внешний вид товара, функциональность или какие-либо иные свойства продукта. Срок гарантии на смартфон составляет 1 год с момента покупки.",
         "brand": "Apple",
-        "category": "Телефоны"
+        "category": "Смартфоны"
 
     },
     {
@@ -145,7 +145,7 @@
         "description": "10 [MNH73LL/A] silver M2 Pro 10C CPU 16C GPU/16GB/512GB SSD",
         "characteristic" : "Смартфон iPhone 14 в корпусе цвета Midnight со встроенной памятью 128 Гб оснащен экраном диагональю 6,1 дюйма, выполненным по технологии OLED. Дисплей типа Super Retina XDR обладает разрешением 2532x1170 пикселей. В этой модели установлен шестиядерный процессор А15 Bionic. В девайсе используется SIM-карта формата nano.",
         "brand": "Apple",
-        "category": "Телефоны"
+        "category": "Смартфоны"
 
     },
     {
@@ -160,7 +160,7 @@
         "description": "11 [MNH73LL/A] silver M2 Pro 10C CPU 16C GPU/16GB/512GB SSD",
         "characteristic" : "Смартфон Samsung Galaxy A15 LTE Black оснащен большим экраном диагональю 6,5 дюйма разрешением 2340x1080 пикселей, в основе которого матрица лежит Super AMOLED — изображение четкое, с высокой детализацией и реалистичной цветопередачей. Яркость достигает 800 нит, частота обновления 90 Гц обеспечивает плавность прокрутки страниц.",
         "brand": "Samsung",
-        "category": "Телефоны"
+        "category": "Смартфоны"
 
     },
     {
@@ -175,7 +175,7 @@
         "description": "12 [MNH73LL/A] silver M2 Pro 10C CPU 16C GPU/16GB/512GB SSD",
         "characteristic" : "Смартфон Samsung Galaxy S24 Ultra 12/256GB Onyx Black дополнен искусственным интеллектом Galaxy AI, который позволяет быстро находить любые предметы с картинок в поиске Google, легко перемещать объекты на фотографиях и переводить речь на нужный язык во время разговора по телефону. Модель оснащена прочной титановой рамкой,",
         "brand": "Samsung",
-        "category": "Телефоны"
+        "category": "Смартфоны"
 
     },
     {
@@ -190,7 +190,7 @@
         "description": "13 [MNH73LL/A] silver M2 Pro 10C CPU 16C GPU/16GB/512GB SSD",
         "characteristic" : "Смартфон Samsung Galaxy A15 LTE Light Blue оснащен большим экраном диагональю 6,5 дюйма разрешением 2340x1080 пикселей, в основе которого матрица лежит Super AMOLED — изображение четкое, с высокой детализацией и реалистичной цветопередачей. Яркость достигает 800 нит, частота обновления 90 Гц обеспечивает плавность прокрутки страниц.",
         "brand": "Samsung",
-        "category": "Телефоны"
+        "category": "Смартфоны"
     },
     {
         "id" : 14,
@@ -204,7 +204,7 @@
         "description": "14 [MNH73LL/A] silver M2 Pro 10C CPU 16C GPU/16GB/512GB SSD",
         "characteristic" : "Смартфон Samsung Galaxy S23 Black — модель с безрамочным экраном диагональю 6,1 дюйма, выполненным по технологии Dynamic AMOLED 2X. Разрешение — 2400x1080 пикселей, частота обновления — 120 Гц. Отображается 16 млн цветов. Надежную защиту дисплея обеспечивает стекло Corning Gorilla Glass 8. Высокую производительность девайса гарантируют восьмиядерный процессор Qualcomm Snapdragon 8 Gen 2",
         "brand": "Samsung",
-        "category": "Телефоны"
+        "category": "Смартфоны"
     }
     ,
     {
@@ -280,5 +280,230 @@
         "characteristic" : "Игровой системный блок MUST MBM360 оснащен двумя разъемами для наушников и микрофона, а также входами USB и HDMI для подключения внешних устройств. Работает на базе шестиядерного процессора Ryzen 5 PRO 3600 компании AMD с частотой 3,6 ГГц. Есть два слота для оперативной памяти объемом от 16 до 32 Гб",
         "brand": "MUST",
         "category": "Компьютеры"
+    }
+    ,
+    {
+        "id" : 20,
+        "title" : "Набор ручного инструмента Rexant 12-5872-2",
+        "article": "1915654",
+        "price": 950,
+        "availability": false,
+        "img1": "https://img.mvideo.ru/Pdb/400090959b.jpg",
+        "img2": "https://img.mvideo.ru/Pdb/400090959b.jpg",
+        "img3": "https://img.mvideo.ru/Pdb/400090959b.jpg",
+        "description": "19 [MNH73LL/A] silver M2 Pro 10C CPU 16C GPU/16GB/512GB SSD",
+        "characteristic" : "Прочная углеродистая сталь",
+        "brand": "Rexant",
+        "category": "Ручной инструмент"
+    }
+    ,
+    {
+        "id" : 21,
+        "title" : "Набор ручного инструмента GOODKING TKS-11006",
+        "article": "1915654",
+        "price": 650,
+        "availability": false,
+        "img1": "https://img.mvideo.ru/Big/400072063bb.jpg",
+        "img2": "https://img.mvideo.ru/Big/400072063bb.jpg",
+        "img3": "https://img.mvideo.ru/Big/400072063bb.jpg",
+        "description": "19 [MNH73LL/A] silver M2 Pro 10C CPU 16C GPU/16GB/512GB SSD",
+        "characteristic" : "комбинированный",
+        "brand": "GOODKING",
+        "category": "Ручной инструмент"
+    }
+    ,
+    {
+        "id" : 21,
+        "title" : "Набор ручного инструмента Kraft KT 700551 ключи комби 6шт: 8-17мм, сумка",
+        "article": "1915654",
+        "price": 1150,
+        "availability": false,
+        "img1": "https://img.mvideo.ru/Pdb/4194461b.jpg",
+        "img2": "https://img.mvideo.ru/Pdb/4194461b.jpg",
+        "img3": "https://img.mvideo.ru/Pdb/4194461b.jpg",
+        "description": "19 [MNH73LL/A] silver M2 Pro 10C CPU 16C GPU/16GB/512GB SSD",
+        "characteristic" : "комбинированный",
+        "brand": "Kraft",
+        "category": "Ручной инструмент"
+    }
+    ,
+    {
+        "id" : 22,
+        "title" : "Ретранслятор Wi-Fi сигнала TP-Link 300Mbps (TL-WA850RE)",
+        "article": "1915654",
+        "price": 2050,
+        "availability": false,
+        "img1": "https://img.mvideo.ru/Pdb/50040047b.jpg",
+        "img2": "https://img.mvideo.ru/Pdb/50040047b.jpg",
+        "img3": "https://img.mvideo.ru/Pdb/50040047b.jpg",
+        "description": "19 [MNH73LL/A] silver M2 Pro 10C CPU 16C GPU/16GB/512GB SSD",
+        "characteristic" : "Усилитель сигнала TL-WA850RE предназначен для расширения зоны покрытия беспроводной сети и увеличения мощности беспроводного сигнала, а также для устранения «мертвых зон». Благодаря беспроводной передаче данных на скорости до 300 Мбит/с, компактному размеру, возможности установки на стене и кнопке Range Extender вы сможете с лёгкостью увеличить зону покрытия беспроводной сети.",
+        "brand": "TP-Link",
+        "category": "Сетевое оборудование"
+    }
+    ,
+    {
+        "id" : 23,
+        "title" : "USB Модем Brovi E3372-325 51071USU Black",
+        "article": "1915654",
+        "price": 3090,
+        "availability": false,
+        "img1": "https://img.mvideo.ru/Pdb/50173439b.jpg",
+        "img2": "https://img.mvideo.ru/Pdb/50173439b.jpg",
+        "img3": "https://img.mvideo.ru/Pdb/50173439b.jpg",
+        "description": "19 [MNH73LL/A] silver M2 Pro 10C CPU 16C GPU/16GB/512GB SSD",
+        "characteristic" : "USB-модем Brovi E3372-325 51071USU Black — портативная модель, выполненная в компактном формате. Габариты равны 8,8х2,8х1,15 см, вес — 0,035 г. Корпус изготовлен из высокопрочного ABS-пластика, стойкого к механическим повреждениям и износу. Колпачок гарантирует защиту коннектора от загрязнений и деформаций",
+        "brand": "Brovi",
+        "category": "Сетевое оборудование"
+    }
+    ,
+    {
+        "id" : 24,
+        "title" : "Коммутатор TP-Link LS1005 5x100Mb неуправляемый",
+        "article": "1915654",
+        "price": 3090,
+        "availability": false,
+        "img1": "https://img.mvideo.ru/Big/50172985bb.jpg",
+        "img2": "https://img.mvideo.ru/Big/50172985bb.jpg",
+        "img3": "https://img.mvideo.ru/Big/50172985bb.jpg",
+        "description": "19 [MNH73LL/A] silver M2 Pro 10C CPU 16C GPU/16GB/512GB SSD",
+        "characteristic" : "Коммутатор TP-Link LS1005 неуправляемого типа выполнен в пластиковом корпусе белого цвета, на котором расположено пять портов RJ45 с автоматическим согласованием и скоростью передачи данных до 100 Мбит/с. Устройство не требует установки драйвера.",
+        "brand": "TP-Link",
+        "category": "Сетевое оборудование"
+    }
+    ,
+    {
+        "id" : 25,
+        "title" : "Лазерный принтер (цветной) HP Color Laser 150nw (4ZB95A)",
+        "article": "1915654",
+        "price": 34090,
+        "availability": false,
+        "img1": "https://img.mvideo.ru/Pdb/30065481b.jpg",
+        "img2": "https://img.mvideo.ru/Pdb/30065481b.jpg",
+        "img3": "https://img.mvideo.ru/Pdb/30065481b.jpg",
+        "description": "19 [MNH73LL/A] silver M2 Pro 10C CPU 16C GPU/16GB/512GB SSD",
+        "characteristic" : "Лазерный принтер HP Color Laser 150nw печатает в цветном и черно-белом формате в качестве 1200х1200 ppi. Скорость — 18 страниц в минуту. Набор из пяти картриджей предусмотрен в комплекте. Бумага стандарта А4, подача листов",
+        "brand": "HP",
+        "category": "Офисное оборудование"
+    }
+    ,
+    {
+        "id" : 26,
+        "title" : "Лазерный принтер Brother HL-L2320D Grey",
+        "article": "1915654",
+        "price": 23090,
+        "availability": false,
+        "img1": "https://img.mvideo.ru/Big/400263524bb.jpg",
+        "img2": "https://img.mvideo.ru/Big/400263524bb.jpg",
+        "img3": "https://img.mvideo.ru/Big/400263524bb.jpg",
+        "description": "19 [MNH73LL/A] silver M2 Pro 10C CPU 16C GPU/16GB/512GB SSD",
+        "characteristic" : "Монохромный лазерный принтер Brother HL-L2320D, цвет серый в пластиковом корпусе габаритами 356x360x183 мм (глубина/ширина/высота) предназначен для установки в малых, мобильных, домашних офисах. Уровень шума во время его работы не превышает 50 дБ. Прибор поддерживает",
+        "brand": "Brother",
+        "category": "Офисное оборудование"
+    }
+    ,
+    {
+        "id" : 27,
+        "title" : "Струйный принтер Epson EcoTank L1210",
+        "article": "1915654",
+        "price": 13090,
+        "availability": false,
+        "img1": "https://img.mvideo.ru/Pdb/400154201b.jpg",
+        "img2": "https://img.mvideo.ru/Pdb/400154201b.jpg",
+        "img3": "https://img.mvideo.ru/Pdb/400154201b.jpg",
+        "description": "19 [MNH73LL/A] silver M2 Pro 10C CPU 16C GPU/16GB/512GB SSD",
+        "characteristic" : "Струйный принтер Epson EcoTank L1210 изготовлен из пластика черного цвета и снабжен кнопочным управлением со световой индикацией. Для связи с ПК предусмотрен один порт USB 2.0. Модель с цветной четырехцветной печатью",
+        "brand": "Epson",
+        "category": "Офисное оборудование"
+    }
+    ,
+    {
+        "id" : 28,
+        "title" : "Электрический духовой шкаф Krona LAZIO 45 BL",
+        "article": "1915654",
+        "price": 54340,
+        "availability": false,
+        "img1": "https://img.mvideo.ru/Big/20070303bb.jpg",
+        "img2": "https://img.mvideo.ru/Big/20070303bb.jpg",
+        "img3": "https://img.mvideo.ru/Big/20070303bb.jpg",
+        "description": "19 [MNH73LL/A] silver M2 Pro 10C CPU 16C GPU/16GB/512GB SSD",
+        "characteristic" : "Встраиваемый электрический духовой шкаф Krona Lazio 45 BL расширит ваши кулинарные возможности. В устройстве заложено три режима, включая конвекцию, которые позволят без лишних хлопот готовить разнообразную выпечку, зажаривать мясо и птицу, томить продукты в керамической посуде. Внутреннего объёма 47,5 л достаточно, чтобы поместить целую курицу или окорок. ",
+        "brand": "Krona",
+        "category": "Бытовая техника"
+    }
+    ,
+    {
+        "id" : 29,
+        "title" : "Электрическая плита (50-55 см) Darina PL EC241 616 1S",
+        "article": "1915654",
+        "price": 13090,
+        "availability": false,
+        "img1": "https://img.mvideo.ru/Big/400108604bb.jpg",
+        "img2": "https://img.mvideo.ru/Big/400108604bb.jpg",
+        "img3": "https://img.mvideo.ru/Big/400108604bb.jpg",
+        "description": "19 [MNH73LL/A] silver M2 Pro 10C CPU 16C GPU/16GB/512GB SSD",
+        "characteristic" : "Электрическая плита (50-55 см) Darina PL EC241 616 1S оборудована индикатором, показывающим остаточное тепло варочной панели и духового шкафа. Снизу встроен небольшой выдвижной ящик для хранения посуды. Устройство оснащено четырьмя конфорками спирального типа. ",
+        "brand": "Darina",
+        "category": "Бытовая техника"
+    }
+    ,
+    {
+        "id" : 30,
+        "title" : "Микроволновая печь с грилем Garlyn MW-2100",
+        "article": "1915654",
+        "price": 11890,
+        "availability": false,
+        "img1": "https://img.mvideo.ru/Pdb/400273630b.jpg",
+        "img2": "https://img.mvideo.ru/Pdb/400273630b.jpg",
+        "img3": "https://img.mvideo.ru/Pdb/400273630b.jpg",
+        "description": "19 [MNH73LL/A] silver M2 Pro 10C CPU 16C GPU/16GB/512GB SSD",
+        "characteristic" : "кварцевый",
+        "brand": "Garlyn",
+        "category": "Бытовая техника"
+    }
+    ,
+    {
+        "id" : 31,
+        "title" : "Телевизор Philips 58PUS8507/60",
+        "article": "1915654",
+        "price": 71890,
+        "availability": false,
+        "img1": "https://img.mvideo.ru/Big/10031890bb.jpg",
+        "img2": "https://img.mvideo.ru/Big/10031890bb.jpg",
+        "img3": "https://img.mvideo.ru/Big/10031890bb.jpg",
+        "description": "19 [MNH73LL/A] silver M2 Pro 10C CPU 16C GPU/16GB/512GB SSD",
+        "characteristic" : "Телевизор Philips 58PUS8507/60 — модель диагональю 58 дюймов разрешением 3840x2160 пикселей. Трехсторонняя подсветка Ambilight обеспечивает эффект присутствия, словно расширяя экран и впуская изображение в помещение, кроме того, она может подстраиваться по цвет стен, переливаться в такт музыке, работать в игровом режиме и многих других. Частота обновления экрана — 60 Гц.",
+        "brand": "Philips",
+        "category": "Телевизоры"
+    }
+    ,
+    {
+        "id" : 32,
+        "title" : "Телевизор Haier 55 Smart TV S3",
+        "article": "1915654",
+        "price": 49890,
+        "availability": false,
+        "img1": "https://img.mvideo.ru/Big/10031855bb.jpg",
+        "img2": "https://img.mvideo.ru/Big/10031855bb.jpg",
+        "img3": "https://img.mvideo.ru/Big/10031855bb.jpg",
+        "description": "19 [MNH73LL/A] silver M2 Pro 10C CPU 16C GPU/16GB/512GB SSD",
+        "characteristic" : "Телевизор Haier 55 Smart TV S3 — модель с 55-дюймовым (139,7 см) экраном формата 16:9 и разрешением 3840х2160 пикселей, на который выводится яркое изображение. Используемый тип технологии HDR — HDR10, Dolby Vision, HLG. Частота обновления составляет 60 Гц, что делает изменение картинки более плавным. Предусмотрена возможность",
+        "brand": "Haier",
+        "category": "Телевизоры"
+    }
+    ,
+    {
+        "id" : 33,
+        "title" : "Телевизор Hi VHIX-24H152MSY",
+        "article": "1915654",
+        "price": 9890,
+        "availability": false,
+        "img1": "https://img.mvideo.ru/Big/10031855bb.jpg",
+        "img2": "https://img.mvideo.ru/Big/10031855bb.jpg",
+        "img3": "https://img.mvideo.ru/Big/10031855bb.jpg",
+        "description": "19 [MNH73LL/A] silver M2 Pro 10C CPU 16C GPU/16GB/512GB SSD",
+        "characteristic" : "Телевизор Hi VHIX-24H152MSY пригодится в небольшой гостиной или на даче.",
+        "brand": "Hi",
+        "category": "Телевизоры"
     }
 ]

@@ -103,7 +103,7 @@ export default function Cart(){
                                             <td className="item-cart-title">
                                                 <div>
                                                     <img className="item-cart-img" src={item.img1} alt="Ноутбук CBR" />
-                                                    <span className="item-cart-title-text">{item.title} </span>
+                                                    <span className="item-cart-title-text">{item.title.length > 35 ? item.title.slice(0, 35) + '...' : item.title} </span>
                                                 </div>
                                             </td>
                                             <td className="item-cart-article">(арт. {item.article})</td>
@@ -123,7 +123,7 @@ export default function Cart(){
                                                     </svg>
                                                 </button>
                                             </td>
-                                            <td className="item-cart-price">{item.price} ₽</td>
+                                            <td className="item-cart-price">{new Intl.NumberFormat('ru-RU').format(item.price)} ₽</td>
                                             <td className="item-cart-price x-summ">
                                                 {new Intl.NumberFormat('ru-RU').format(item.price * item.count)} ₽
                                             </td>
@@ -148,7 +148,7 @@ export default function Cart(){
                                             <img className="item-cart-img" src={item.img1} alt="Ноутбук CBR" />
                                         </div>
                                         <div className="mob-item-title">
-                                            {item.title}
+                                            {item.title.length > 35 ? item.title.slice(0, 35) + '...' : item.title}
                                         </div>
                                         <div className="mob-item-count">
                                             <button className="count_btn" data-action="minus" >

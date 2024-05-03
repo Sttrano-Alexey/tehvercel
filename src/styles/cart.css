@@ -54,7 +54,7 @@
     max-width: 50px;
     max-height: 50px;
     vertical-align: middle;
-    border: 1px solid #D4D4D4;
+    /* border: 1px solid #D4D4D4; */
     margin-right: 12px;
 }
 
@@ -117,7 +117,7 @@
 }
 
 .item-cart-price {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .item-cart-article {
@@ -216,7 +216,7 @@
     font-size: 20px;
 }
 .order__item-main span{
-    font-size: 20px;
+    font-size: 16px;
 }
 .order-btn{
     width: 100%;
