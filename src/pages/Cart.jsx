@@ -166,8 +166,8 @@ export default function Cart(){
                                                 </svg>
                                             </button>
                                         </div>
-                                        <div className=" mob-item-price mob-item-price-fix">
-                                            {item.price} ₽
+                                        <div className="mob-item-price mob-item-price-fix">
+                                            {new Intl.NumberFormat('ru-RU').format(item.price)}
                                         </div>
                                         <div className="mob-item-price">
                                             {new Intl.NumberFormat('ru-RU').format(item.price * item.count)} ₽

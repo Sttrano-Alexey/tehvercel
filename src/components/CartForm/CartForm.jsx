@@ -8,7 +8,9 @@ export default function CartForm({ currentFormIndex, setFormIndex, totalForms })
 
   const handlePhizCheckboxChange = () => {
     setIsPhysicalLegal(true);
+
   };
+
 
   const handleLegalCheckboxChange = () => {
     setIsPhysicalLegal(false);
@@ -36,7 +38,7 @@ export default function CartForm({ currentFormIndex, setFormIndex, totalForms })
 
 
   // ВАЛИДАЦИЯ
-// Добавляем состояния для хранения данных формы
+  // Добавляем состояния для хранения данных формы
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -73,7 +75,7 @@ export default function CartForm({ currentFormIndex, setFormIndex, totalForms })
         return false;
       }
     }
-    // Добавьте дополнительные проверки по необходимости
+    // Добавлю дополнительные проверки по необходимости хз
     return true;
   };
 
