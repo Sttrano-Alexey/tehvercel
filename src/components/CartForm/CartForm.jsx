@@ -1,8 +1,8 @@
 import "./CartForm.css";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect  } from "react";
 import doneImg from '../Images/Icons/formDone.png'
 
-export default function CartForm() {
+export default function CartForm({ currentFormIndex, setFormIndex, totalForms }) {
   // проверка чекбоксов для юр физ лица
   const [isPhysicalLegal, setIsPhysicalLegal] = useState(true);
 
@@ -33,9 +33,6 @@ export default function CartForm() {
   const handleCheckCheckboxChange = () => {
     setSpbCheck(false);
   };
-
-  
-  const [currentFormIndex, setCurrentFormIndex] = useState(0);
 
   
   const forms = [
@@ -251,15 +248,15 @@ export default function CartForm() {
   const totalFormsCount = forms.length;
 
   const handleNextBtnClick = () => {
-    setCurrentFormIndex((prevIndex) =>
-      prevIndex === totalFormsCount - 1 ? 0 : prevIndex + 1
-    );
+    if (currentFormIndex < totalForms - 1) {
+      setFormIndex(currentFormIndex + 1);
+    }
   };
 
   const handlePrevBtnClick = () => {
-    setCurrentFormIndex((prevIndex) =>
-      prevIndex === 0 ? totalFormsCount - 1 : prevIndex - 1
-    );
+    if (currentFormIndex > 0) {
+      setFormIndex(currentFormIndex - 1);
+    }
   };
 
   return (

@@ -6,6 +6,10 @@ import CartForm from "../components/CartForm/CartForm";
 
 export default function Cart(){
 
+  // Состояние для отслеживания текущего индекса формы
+  const [currentFormIndex, setCurrentFormIndex] = useState(0);
+  const totalFormsCount = 4; // Предполагаем, что у вас 4 формы, корректируйте в соответствии с вашими нуждами
+
      const fetchProductById = async (productId) => {
         try {
             // Загрузка данных из файла products.json
@@ -187,7 +191,11 @@ export default function Cart(){
                                     Перейти к покупкам
                                 </button>
                             </div>
-                        ): <CartForm></CartForm>}
+                        ): <CartForm
+                        currentFormIndex={currentFormIndex}
+                        setFormIndex={setCurrentFormIndex}
+                        totalForms={totalFormsCount}
+                      />}
                     </div>
                     {cartItems.length === 0 ? (
                         <></>
@@ -199,7 +207,7 @@ export default function Cart(){
                                     <div className="order__item"><span>Доставка</span><span>СДЭК</span></div>
                                     <div className="order__item-main"><p>К оплате:</p> <span className="total-sum">{new Intl.NumberFormat('ru-RU').format(totalSum)} ₽</span></div>
                                 </div>
-                                <button className="order-btn">Оформить заказ</button>
+                                <button className="order-btn" disabled={currentFormIndex !== totalFormsCount - 1}>Оформить заказ</button>
                                 <p className="order-confirmation">
                                     Нажимая на кнопку "Оформить" Вы подтверждаете своё согласие на обработку персональных данных.
                                 </p>
