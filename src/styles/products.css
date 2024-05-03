@@ -89,6 +89,12 @@
     display: flex;
     justify-content: center;
     margin-bottom: 24px;
+    min-height: 120px;
+    flex: 1 1 auto;
+}
+.products__slider-item img{
+    width: 100%;
+    object-fit: contain;
 }
 .product__item img{
     max-width: 125px;

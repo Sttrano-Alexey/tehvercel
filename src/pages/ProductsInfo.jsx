@@ -2,7 +2,6 @@ import '../styles/ProductsInfo.css'
 import Header from '../components/Header/Header'
 import startFill from '../components/Images/Products/star_fill.svg'
 import startNone from '../components/Images/Products/star_none.svg'
-import img from '../components/Images/Products/products-slide.jpg'
 
 
 import React, { useEffect, useState } from "react";
@@ -146,11 +145,11 @@ export default function ProductsInfo(){
                             </div>
                             <div className="products__info-slider">
                                 <div className="products__info-slider-navigation">
-                                    <img className='productsInfo__img-slide' src={img} alt="" />
-                                    <img className='productsInfo__img-slide' src={img} alt="" />
-                                    <img className='productsInfo__img-slide' src={img} alt="" />
+                                    <img className='productsInfo__img-slide' src={productInfo.img1} alt="" />
+                                    <img className='productsInfo__img-slide' src={productInfo.img2} alt="" />
+                                    <img className='productsInfo__img-slide' src={productInfo.img3} alt="" />
                                 </div>
-                                <img className='productsInfo__img' src={img} alt="" />
+                                <img className='productsInfo__img' src={productInfo.img1} alt="" />
                             </div>
                             <span className='productsInfo__descTitle'>Характеристика</span>
                             <p className='productsInfo__desc'>
