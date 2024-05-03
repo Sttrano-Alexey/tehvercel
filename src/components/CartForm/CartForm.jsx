@@ -34,6 +34,49 @@ export default function CartForm({ currentFormIndex, setFormIndex, totalForms })
     setSpbCheck(false);
   };
 
+
+  // ВАЛИДАЦИЯ
+// Добавляем состояния для хранения данных формы
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    organizationName: "",
+    ipName: "",
+    legalEmail: "",
+    address: "",
+    home: "",
+    entrance: "",
+    apartment: "",
+  });
+
+    // Функция для обновления значений ввода
+    const handleInputChange = (e) => {
+      const { name, value } = e.target;
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        [name]: value,
+      }));
+    };
+
+      // Валидация формы
+  const validateForm = () => {
+    // Пример простой валидации
+    if (isPhysicalLegal) {
+      if (!formData.fullName || !formData.email || !formData.phone) {
+        alert("Пожалуйста, заполните все поля для физического лица.");
+        return false;
+      }
+    } else {
+      if (!formData.organizationName || !formData.email || !formData.phone) {
+        alert("Пожалуйста, заполните все поля для юридического лица.");
+        return false;
+      }
+    }
+    // Добавьте дополнительные проверки по необходимости
+    return true;
+  };
+
   
   const forms = [
     <div key="phiz-form">
@@ -57,6 +100,9 @@ export default function CartForm({ currentFormIndex, setFormIndex, totalForms })
         className="form-input"
         placeholder="Введите имя"
         disabled={!isPhysicalLegal}
+        name="fullName"
+        value={formData.fullName}
+        onChange={handleInputChange}
       />
       <label className="form-label" htmlFor="phiz-form-checkbox">
         Почта
@@ -66,6 +112,9 @@ export default function CartForm({ currentFormIndex, setFormIndex, totalForms })
         className="form-input"
         placeholder="name@example.com"
         disabled={!isPhysicalLegal}
+        name="email"
+        value={formData.email}
+        onChange={handleInputChange}
       />
       <label className="form-label" htmlFor="phiz-form-checkbox">
         Телефон
@@ -75,6 +124,9 @@ export default function CartForm({ currentFormIndex, setFormIndex, totalForms })
         className="form-input"
         placeholder="+7 123 456 78 90"
         disabled={!isPhysicalLegal}
+        name="phone"
+        value={formData.phone}
+        onChange={handleInputChange}
       />
     </form>
     <form className="form-form legal-form-column">
@@ -132,7 +184,7 @@ export default function CartForm({ currentFormIndex, setFormIndex, totalForms })
             <div className="form-row-row">
               <div className="form-column form-form city-input">
                 <label className="form-label">Город</label>
-                <input type="tel" className="form-input" placeholder="Москва" />
+                <input type="text" className="form-input" placeholder="Москва" />
               </div>
             </div>
             <div className="form-row-row">
@@ -248,8 +300,9 @@ export default function CartForm({ currentFormIndex, setFormIndex, totalForms })
   const totalFormsCount = forms.length;
 
   const handleNextBtnClick = () => {
-    if (currentFormIndex < totalForms - 1) {
+    if (validateForm() && currentFormIndex < totalForms - 1) {
       setFormIndex(currentFormIndex + 1);
+      console.log(formData);
     }
   };
 
