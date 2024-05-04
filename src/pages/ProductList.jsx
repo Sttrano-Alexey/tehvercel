@@ -209,7 +209,7 @@ const ProductList = () => {
                       </label>
   
                     ))}
-                    {brands.length > 5 && (
+                    {brands.length > 6 && (
                       <button className="filter-more" onClick={() => setShowAllBrands(!showAllBrands)}>
                         {showAllBrands ? 'Скрыть' : 'Показать еще'}
                       </button>

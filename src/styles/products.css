@@ -362,10 +362,11 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         justify-content: center;
+        text-align: center;
     }
     .brand-filter label, .category-filter label{
         justify-content: center;
-        font-size: 16px;
+        font-size: 14px;
     }
     .brand-filter label input, .category-filter label input{
         visibility: hidden;
@@ -461,6 +462,10 @@
     .not-found span{
         font-size: 14px !important;
       }
+    .products__slider-item{
+        min-height: auto;
+        margin-bottom: 0;
+    }
 }
 @media (max-width: 500px) {
     .product__item{
@@ -492,6 +497,10 @@
         font-size: 16px !important;
     }
     .brand-filter, .category-filter{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+        text-align: start !important;
+    }
+    .brand-filter label, .category-filter label{
+        justify-content: start;
     }
 }
