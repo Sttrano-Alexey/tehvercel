@@ -16,7 +16,9 @@ const ProductList = () => {
   const [priceFilterFrom, setPriceFilterFrom] = useState(0); // минимальная цена
   const [priceFilterTo, setPriceFilterTo] = useState(0); // максимальная цена
   const [selectedBrands, setSelectedBrands] = useState([]); // выбранные бренды
-  const [selectedCategories, setSelectedCategories] = useState([]); // выбранные категории
+  const [selectedCategories, setSelectedCategories] = useState(
+    (new URLSearchParams(window.location.search).get("category") || "").split(",").filter(Boolean)
+  ); // выбранные категории
 
   const [priceFilterVisible, setPriceFilterVisible] = useState(false)
   const [brandFilterVisible, setbrandFilterVisible] = useState(false)
@@ -65,6 +67,7 @@ const ProductList = () => {
     return filteredProducts;
   }, [products, selectedBrands, selectedCategories, priceFilterFrom, priceFilterTo]);
 
+
   const loadMoreProducts = () => {
     setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 6);
   };
@@ -102,7 +105,9 @@ const ProductList = () => {
     }
   };
 
-  
+  const [showAllBrands, setShowAllBrands] = useState(false);
+
+  const visibleBrands = showAllBrands ? brands : brands.slice(0, 5);
 
   return (
     <>
@@ -164,7 +169,16 @@ const ProductList = () => {
                 </button>
                 {brandFilterVisible && (
                     <div className="brand-filter">
-                    {brands.map((brand) => (
+                    {visibleBrands
+                      .filter((brand) =>
+                        selectedCategories.length === 0
+                          ? true
+                          : products.some(
+                              (product) =>
+                                product.category === selectedCategories[0] && product.brand === brand
+                            )
+                      )
+                      .map((brand) => (
                       <label key={brand} style={{
                         display: "flex",
                         alignItems: "center",
@@ -195,8 +209,14 @@ const ProductList = () => {
                       </label>
   
                     ))}
+                    {brands.length > 5 && (
+                      <button className="filter-more" onClick={() => setShowAllBrands(!showAllBrands)}>
+                        {showAllBrands ? 'Скрыть' : 'Показать еще'}
+                      </button>
+                    )}
                   </div>
                 )}
+
               </div>
               <div className="filter-item">
                 <button onClick={() => setCategoryFilterVisible(!categoryFilterVisible)} className="filter-button">

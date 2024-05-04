@@ -1,6 +1,7 @@
 import '../ProductsHeader/ProductsHeader.css'
 import { useParams } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 export default function ProductHeader(){
 
@@ -16,6 +17,27 @@ export default function ProductHeader(){
   const toBlockView = () => {
     document.querySelector('.products').classList.remove('line')
   }
+
+  const [productCount, setProductCount] = useState('');
+
+  useEffect(() => {
+    fetch('https://raw.githubusercontent.com/Sttrano-Alexey/tehvercel/main/src/DATA/products.json')
+      .then(response => response.json())
+      .then(data => {
+        let count = data.length;
+        if (count === 1) {
+          setProductCount('1 товар');
+        } else if (count > 1 && count < 5) {
+          setProductCount(count + ' товара');
+        } else {
+          setProductCount(count + ' товаров');
+        }
+      })
+      .catch(error => {
+        console.error('Ошибка при получении данных:', error);
+      });
+  }, []);
+
 
     return(
         <>
@@ -46,7 +68,7 @@ export default function ProductHeader(){
                 <h3 style={{
                   'maxWidth': window.innerWidth < 750 ? '75ch' : 'none'
                 }}>{category ? (category.length > 15 && window.innerWidth < 750 ? category.slice(0, 15) + '...' : category) : 'Категория'}</h3>
-                <span>19 товаров</span>
+                <span>{productCount}</span>
               </div>
               <div className="view__buttons">
                 <button className="viewBtn" onClick={toLineView}>

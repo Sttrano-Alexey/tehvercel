@@ -273,7 +273,14 @@
 .brand-filter label input, .category-filter label input{
     order: 2;
 }
-
+.filter-more{
+    border: none !important;
+    color: #C91111;
+    padding: 0 !important;
+    width: 100% !important;
+    text-align: center !important;
+    display: inline-block !important;
+}
 @media (max-width:1100px) {
     .products__row{
         gap: 32px;
@@ -336,6 +343,15 @@
         text-align: center;
         padding: 10px;
       }
+      .filter-more{
+        border: none !important;
+        color: #C91111;
+        padding: 0 !important;
+        width: 100% !important;
+        text-align: center !important;
+        display: inline-block !important;
+    }
+      
 }
 
 @media (max-width: 650px) {
@@ -377,6 +393,7 @@
     .products__header{
         grid-template-columns: 1fr 1fr !important;
     }
+    
 }
 @media (max-width: 600px) {
     .product__item{
