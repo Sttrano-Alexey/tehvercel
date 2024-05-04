@@ -29,26 +29,33 @@ export default function ProductsInfo(){
 
 
     useEffect(() => {
-        // Чтение файла products.json
-        fetch('https://raw.githubusercontent.com/Sttrano-Alexey/tehvercel/main/src/DATA/products.json')
+      // Чтение файла products.json
+      fetch(
+        "https://raw.githubusercontent.com/Sttrano-Alexey/tehvercel/main/src/DATA/products.json"
+      )
         // fetch('../DATA/products.json')
-            .then((response) => response.json())
-            .then((data) => {
-                const product = data.find((item) => item.id === parseInt(productId)); // Парсим productId к числу, если необходимо
-                setProductInfo(product);
-            })
-            .catch((error) => {
-                console.error('Ошибка при чтении файла products.json:', error);
-            });
+        .then((response) => response.json())
+        .then((data) => {
+          const product = data.find((item) => item.id === parseInt(productId)); // Парсим productId к числу, если необходимо
+          setProductInfo(product);
+        })
+        .catch((error) => {
+          console.error("Ошибка при чтении файла products.json:", error);
+        });
 
-        let existingCart = JSON.parse(localStorage.getItem("cart")) || [];
-        setInCart(existingCart.find((item) => item.id === productId) !== undefined);
-
+      // Проверяем, есть ли товар уже в корзине при загрузке компонента
+      const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
+      const isItemInCart = existingCart.find(
+        (item) => item.id === productId.id
+      );
+      setInCart(!!isItemInCart);
+      if (isItemInCart) setCount(isItemInCart.count);
     }, [productId]); // Зависимость только от productId
 
     if (!productInfo) {
-        return <div className='load'>Loading...</div>;
+      return <div className="load">Loading...</div>;
     }
+
 
     const getCountFromLocalStorage = () => {
         let existingCart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -81,6 +88,7 @@ export default function ProductsInfo(){
     const handleMinus = () => {
         let existingCart = JSON.parse(localStorage.getItem("cart")) || [];
         const itemInCart = existingCart.find((item) => item.id === productInfo.id);
+        let isItemDeleted = false;
         if (itemInCart && itemInCart.count > 1) {
             existingCart = existingCart.map((item) => {
                 if (item.id === productInfo.id) {
@@ -91,11 +99,19 @@ export default function ProductsInfo(){
             localStorage.setItem("cart", JSON.stringify(existingCart));
             setCount(getCountFromLocalStorage());
         } else {
-            existingCart = existingCart.filter((item) => item.id !== productInfo.id);
+            existingCart = existingCart.filter((item) => {
+                if (item.id === productInfo.id) {
+                    isItemDeleted = true;
+                    return false;
+                }
+                return true;
+            });
             localStorage.setItem("cart", JSON.stringify(existingCart));
             setCount(0);
             setInCart(false);
-            updateCartLength(prevCartLength => prevCartLength - 1);
+            if (isItemDeleted) {
+                updateCartLength(prevCartLength => prevCartLength - 1);
+            }
         }
     };
 
@@ -111,7 +127,7 @@ export default function ProductsInfo(){
                 return item;
             });
         } else {
-            existingCart = [...existingCart, { id: productInfo.id - 1, count: 1 }];
+            existingCart = [...existingCart, { id: productInfo.id, count: 1 }];
         }
         localStorage.setItem("cart", JSON.stringify(existingCart));
         setCount(getCountFromLocalStorage());
