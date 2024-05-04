@@ -68,12 +68,85 @@
 }
 .category span{
   font-size: 14px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 10fr;
   align-items: center;
   gap: 10px;
 }
 .category span::before{
+  content: url(../Images/CatalogIcons/pc.svg);
+}
+.category:nth-of-type(3) span::before{
+  content: url(../Images/CatalogIcons/server.svg);
+}
+.category:nth-of-type(4) span::before{
+  content: url(../Images/CatalogIcons/phone_icon.svg);
+}
+.category:nth-of-type(5) span::before{
+  content: url(../Images/CatalogIcons/print.svg);
+}
+.category:nth-of-type(6) span::before{
   content: url(../Images/CatalogIcons/acb.svg);
+}
+.category:nth-of-type(7) span::before{
+  content: url(../Images/CatalogIcons/core.svg);
+}
+.category:nth-of-type(8) span::before{
+  content: url(../Images/CatalogIcons/usb.svg);
+}
+.category:nth-of-type(9) span::before{
+  content: url(../Images/CatalogIcons/wifi.svg);
+}
+.category:nth-of-type(10) span::before{
+  content: url(../Images/CatalogIcons/cam.svg);
+}
+.category:nth-of-type(11) span::before{
+  content: url(../Images/CatalogIcons/tv.svg);
+}
+.category:nth-of-type(12) span::before{
+  content: url(../Images/CatalogIcons/pristavka.svg);
+}
+.category:nth-of-type(13) span::before{
+  content: url(../Images/CatalogIcons/PO.svg);
+}
+.category:nth-of-type(14) span::before{
+  content: url(../Images/CatalogIcons/mouse.svg);
+}
+.category:nth-of-type(15) span::before{
+  content: url(../Images/CatalogIcons/zvezda.svg);
+}
+.category:nth-of-type(16) span::before{
+  content: url(../Images/CatalogIcons/appliance.svg);
+}
+.category:nth-of-type(17) span::before{
+  content: url(../Images/CatalogIcons/styl.svg);
+}
+.category:nth-of-type(18) span::before{
+  content: url(../Images/CatalogIcons/drel.svg);
+}
+.category:nth-of-type(19) span::before{
+  content: url(../Images/CatalogIcons/sad.svg);
+}
+.category:nth-of-type(20) span::before{
+  content: url(../Images/CatalogIcons/rashod.svg);
+}
+.category:nth-of-type(21) span::before{
+  content: url(../Images/CatalogIcons/otvertka.svg);
+}
+.category:nth-of-type(22) span::before{
+  content: url(../Images/CatalogIcons/molnia.svg);
+}
+.category:nth-of-type(23) span::before{
+  content: url(../Images/CatalogIcons/poloska.svg);
+}
+.category:nth-of-type(24) span::before{
+  content: url(../Images/CatalogIcons/lampa.svg);
+}
+.category:nth-of-type(26) span::before{
+  content: url(../Images/CatalogIcons/minimolnia.svg);
+}
+.category:nth-of-type(27) span::before{
+  content: url(../Images/CatalogIcons/rozetka.svg);
 }
 .category span:hover{
   color: #CE3E28;

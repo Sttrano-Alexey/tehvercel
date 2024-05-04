@@ -12,7 +12,6 @@ import FastOrderMobile from '../components/FastOrderMobile/FastOrderMobile'
 import { CartContext } from '../components/Catalog/CatalogContext';
 import { useContext } from 'react';
 
-
 export default function ProductsInfo(){
 
     const { cartLength, updateCartLength } = useContext(CartContext);
@@ -123,12 +122,8 @@ export default function ProductsInfo(){
     const handleSlideChange = (event) => {
         const imgSrc = event.target.src;
         const imgElement = document.querySelector('.productsInfo__img');
-        console.log(imgElement);
         imgElement.src = imgSrc;
-        console.log(imgElement);
     };
-
-
     return(
         <>
             <Header></Header>
@@ -162,9 +157,9 @@ export default function ProductsInfo(){
                             </div>
                             <div className="products__info-slider">
                                 <div className="products__info-slider-navigation">
-                                    <img className='productsInfo__img-slide' src={productInfo.img1} onClick={handleSlideChange} alt="" />
-                                    <img className='productsInfo__img-slide' src={productInfo.img2} onClick={handleSlideChange} alt="" />
-                                    <img className='productsInfo__img-slide' src={productInfo.img3} onClick={handleSlideChange} alt="" />
+                                    <img className='productsInfo__img-slide' src={productInfo.img1} onMouseMove={handleSlideChange} alt="" />
+                                    <img className='productsInfo__img-slide' src={productInfo.img2} onMouseMove={handleSlideChange} alt="" />
+                                    <img className='productsInfo__img-slide' src={productInfo.img3} onMouseMove={handleSlideChange} alt="" />
                                 </div>
                                 <img className='productsInfo__img' src={productInfo.img1} alt="" />
                             </div>

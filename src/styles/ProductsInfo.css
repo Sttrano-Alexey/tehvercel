@@ -30,6 +30,7 @@
     display: flex;
     margin-bottom: 17px;
     gap: 20px;
+    margin-top: 12px;
 }
 .products__info-slider-navigation{
     display: flex;
@@ -39,9 +40,11 @@
 .productsInfo__img{
     max-width: 323px;
     height: 100%;
+    max-height: 228px;
 }
 .productsInfo__img-slide{
     max-width: 80px;
+    cursor: pointer;
 }
 .productsInfo__descTitle{
     font-size: 16px;
@@ -189,6 +192,7 @@
     .productsInfo__img{
         width: 100%;
         max-width: 100%;
+        object-fit: contain;
         border: none;
     }
     .productsInfo__header{

@@ -105,7 +105,7 @@ const CatalogMain = () => {
                         });
                       }}
                     >
-                      <span>{category.name}</span>
+                    <span className="category-name">{category.name}</span>
                     </div>
                   );
                 }
