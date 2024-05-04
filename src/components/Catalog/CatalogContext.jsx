@@ -14,3 +14,19 @@ export const CatalogProvider = ({ children }) => {
     </CatalogContext.Provider>
   );
 };
+
+export const CartContext = createContext();
+
+export const CartProvider = ({ children }) => {
+  const [cartLength, setCartLength] = useState(JSON.parse(localStorage.getItem('cart') || '[]').length);
+
+  const updateCartLength = (newCartLength) => {
+    setCartLength(newCartLength);
+  };
+
+  return (
+    <CartContext.Provider value={{ cartLength, updateCartLength }}>
+      {children}
+    </CartContext.Provider>
+  );
+};

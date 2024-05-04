@@ -11,6 +11,7 @@ import Pay from './pages/Pay'
 import Safeguard from './pages/Safeguard'
 import About from './pages/About'
 import Contacts from './pages/Contacts'
+import { CartProvider } from './components/Catalog/CatalogContext'
 function App() {
 
   return (

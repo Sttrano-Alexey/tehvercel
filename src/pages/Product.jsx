@@ -1,11 +1,16 @@
 import React, { useState } from "react";
+import { useContext } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import '../styles/products.css'
+import { CartContext } from "../components/Catalog/CatalogContext";
 import startFill from '../components/Images/Products/star_fill.svg'
 import startNone from '../components/Images/Products/star_none.svg'
 
 const Product = ({ product }) => {
+
+  const { cartLength, updateCartLength } = useContext(CartContext);
+
 
   const [isInCart, setIsInCart] = useState(false);
   const [count, setCount] = useState(1);
@@ -44,6 +49,8 @@ const Product = ({ product }) => {
       localStorage.setItem("cart", JSON.stringify(newCart));
     }
     setIsInCart(true);
+    updateCartLength(prevCartLength => prevCartLength + 1);
+
   };
 
   const handlePlus = () => {
@@ -80,6 +87,7 @@ const Product = ({ product }) => {
       existingCart = existingCart.filter((item) => item.id !== product.id);
       localStorage.setItem("cart", JSON.stringify(existingCart));
       setIsInCart(false);
+      updateCartLength(prevCartLength => prevCartLength - 1);
     }
   };
 

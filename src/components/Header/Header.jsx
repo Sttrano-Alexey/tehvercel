@@ -1,14 +1,15 @@
 import './Header.css'
 import logo from '../Images/Logo/logo.svg'
 import search from '../Images/Icons/search.svg'
-import CatalogMain from '../Catalog/CatalogMain'
 import React, { useState } from 'react'
-import { useEffect } from 'react'
 import { useContext } from 'react';
-import { CatalogContext } from '../../components/Catalog/CatalogContext';
+import { CatalogContext, CartContext } from '../../components/Catalog/CatalogContext';
 import MobileSearch from '../MobileSearch/MobileSearch'
 
 export default function Header(){
+    const { cartLength, updateCartLength } = useContext(CartContext);
+
+
 
     const [isSearchOpen, setSearchOpen] = useState(false)
     const {isCatalogOpen, setCatalogOpen } = useContext(CatalogContext);
@@ -38,24 +39,6 @@ export default function Header(){
             window.location.href = currentUrl.includes('cart') ? previousUrl || '/' : '/cart';
             localStorage.setItem('previousUrl', currentUrl);
         }
-
-
-        const [cartLength, setCartLength] = useState(JSON.parse(localStorage.getItem('cart') || '[]').length);
-
-        useEffect(() => {
-          // Отслеживание изменений в local storage
-          const cartStorageListener = (event) => {
-            if (event.key === 'cart') {
-              // Обновление состояния с длиной массива
-              setCartLength(JSON.parse(event.newValue).length);
-            }
-          };
-          window.addEventListener('storage', cartStorageListener);
-
-          return () => {
-            window.removeEventListener('storage', cartStorageListener);
-          };
-        }, [localStorage.getItem('cart')]);
 
 
     return(
