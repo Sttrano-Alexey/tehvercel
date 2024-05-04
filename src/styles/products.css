@@ -24,14 +24,27 @@
     width: 100%;
     max-width: 100%;
     display: grid;
-    grid-template-areas: "s a p"
-                         "s t p"
-                         "s d  b"
-                         "s v b"
-                         "s r b";
+    grid-template-areas: "s a a a p"
+                         "s t t t p"
+                         "s d d d b"
+                         "s v v v b"
+                         "s r r r b";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1.5fr;
+    grid-template-rows: auto auto auto auto auto;
+    column-gap: 15px;
+}
+.products.line .product__item{
+    border: none;
+    border-bottom: 1px solid #BEBEBE;
+    border-radius: 0;
+}
+.products.line .product__item:last-of-type{
+    border: none !important;
 }
 .products.line .products__slider-item{
     grid-area: s;
+    min-width: 0;
+    max-width: 162px;
 }
 .products.line .product__price{
     grid-area: p;
@@ -60,16 +73,22 @@
     grid-area: b;
     display: flex;
     justify-content: center;
+    max-height: 40px;
     gap: 15px;
 }
 .products.line .product__added-to-cart-btn{
     max-width: 108px;
+    grid-area: b;
 }
 .products.line .product-item-descriptions{
     display: block;
     grid-area: d;
 }
 .product-item-descriptions{
+    display: none;
+    max-width: 358px;
+}
+.products.line .products-slider-nav{
     display: none;
 }
 
@@ -199,6 +218,16 @@
     display: grid;
     grid-template-columns: 1fr 4fr;
     gap: 93px;
+    position: relative;
+}
+.products.line .products__row{
+    gap: 0px;
+}
+.products.line .products__filter{
+    border-right: 1px solid #BEBEBE;
+    padding-right: 93px !important;
+    box-sizing: content-box;
+    margin-right: 10px;
 }
 .show-more-products-btn{
     width: 100%;

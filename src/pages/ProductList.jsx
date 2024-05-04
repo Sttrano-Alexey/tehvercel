@@ -115,7 +115,7 @@ const ProductList = () => {
       <section className="products">
         <div className="products__container container">
           <ProductHeader></ProductHeader>
-          <div className="products__row">
+          <div className="products__row filter">
             <div className="products__filter">
               <div className="filter-item">
                 <button onClick={() => setPriceFilterVisible(!priceFilterVisible)} className="filter-button">
