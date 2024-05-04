@@ -120,6 +120,14 @@ export default function ProductsInfo(){
         updateCartLength(prevCartLength => prevCartLength + 1);
     }
 
+    const handleSlideChange = (event) => {
+        const imgSrc = event.target.src;
+        const imgElement = document.querySelector('.productsInfo__img');
+        console.log(imgElement);
+        imgElement.src = imgSrc;
+        console.log(imgElement);
+    };
+
 
     return(
         <>
@@ -154,9 +162,9 @@ export default function ProductsInfo(){
                             </div>
                             <div className="products__info-slider">
                                 <div className="products__info-slider-navigation">
-                                    <img className='productsInfo__img-slide' src={productInfo.img1} alt="" />
-                                    <img className='productsInfo__img-slide' src={productInfo.img2} alt="" />
-                                    <img className='productsInfo__img-slide' src={productInfo.img3} alt="" />
+                                    <img className='productsInfo__img-slide' src={productInfo.img1} onClick={handleSlideChange} alt="" />
+                                    <img className='productsInfo__img-slide' src={productInfo.img2} onClick={handleSlideChange} alt="" />
+                                    <img className='productsInfo__img-slide' src={productInfo.img3} onClick={handleSlideChange} alt="" />
                                 </div>
                                 <img className='productsInfo__img' src={productInfo.img1} alt="" />
                             </div>

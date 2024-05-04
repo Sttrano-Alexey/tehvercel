@@ -39,13 +39,9 @@
 .productsInfo__img{
     max-width: 323px;
     height: 100%;
-    border-radius: 20px;
-    border:  1px solid #D4D4D4;
 }
 .productsInfo__img-slide{
     max-width: 80px;
-    border:  1px solid #D4D4D4;
-    border-radius: 10px;
 }
 .productsInfo__descTitle{
     font-size: 16px;
