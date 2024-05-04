@@ -3,8 +3,13 @@ import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import '../styles/cart.css'
 import CartForm from "../components/CartForm/CartForm";
+import { CartContext } from "../components/Catalog/CatalogContext";
+import { useContext } from "react";
 
 export default function Cart(){
+
+  const { cartLength, updateCartLength } = useContext(CartContext);
+
 
   // Состояние для отслеживания текущего индекса формы
   const [currentFormIndex, setCurrentFormIndex] = useState(0);
@@ -54,11 +59,13 @@ export default function Cart(){
         updatedCartItems.splice(index, 1); // Удаляем товар из массива
         setCartItems(updatedCartItems); // Обновляем состояние корзины
         localStorage.setItem("cart", JSON.stringify(updatedCartItems.map(item => item.id))); // Обновляем localStorage
+        updateCartLength(prevCartLength => prevCartLength - 1);
     };
 
     const clearCart = () => {
         setCartItems([]); // Очищаем корзину
         localStorage.removeItem("cart"); // Удаляем корзину из localStorage
+        updateCartLength(prevCartLength => 0);
     };
 
     const totalSum = cartItems.reduce((sum, item) => sum + (item.price * 1) * item.count, 0);

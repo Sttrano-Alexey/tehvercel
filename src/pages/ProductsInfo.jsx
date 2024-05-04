@@ -9,7 +9,14 @@ import { useParams } from "react-router-dom";
 import Footer from '../components/Footer/Footer'
 import FastOrderMobile from '../components/FastOrderMobile/FastOrderMobile'
 
+import { CartContext } from '../components/Catalog/CatalogContext';
+import { useContext } from 'react';
+
+
 export default function ProductsInfo(){
+
+    const { cartLength, updateCartLength } = useContext(CartContext);
+
 
     const { productId } = useParams();
     const [productInfo, setProductInfo] = useState(null);
@@ -89,6 +96,7 @@ export default function ProductsInfo(){
             localStorage.setItem("cart", JSON.stringify(existingCart));
             setCount(0);
             setInCart(false);
+            updateCartLength(prevCartLength => prevCartLength - 1);
         }
     };
 
@@ -109,6 +117,7 @@ export default function ProductsInfo(){
         localStorage.setItem("cart", JSON.stringify(existingCart));
         setCount(getCountFromLocalStorage());
         setInCart(true);
+        updateCartLength(prevCartLength => prevCartLength + 1);
     }
 
 

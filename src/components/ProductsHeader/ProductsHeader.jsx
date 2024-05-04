@@ -67,7 +67,7 @@ export default function ProductHeader(){
               <div className="products__title">
                 <h3 style={{
                   'maxWidth': window.innerWidth < 750 ? '75ch' : 'none'
-                }}>{category ? (category.length > 15 && window.innerWidth < 750 ? category.slice(0, 15) + '...' : category) : 'Категория'}</h3>
+                }}>{category ? (category.length > 15 && window.innerWidth < 750 ? category.slice(0, 15) + '...' : category) : 'Все товары'}</h3>
                 <span>{productCount}</span>
               </div>
               <div className="view__buttons">
