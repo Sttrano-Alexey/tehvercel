@@ -91,15 +91,55 @@ const Product = ({ product }) => {
     }
   };
 
+  // Инициализация слайдера
 
+  useEffect(() => {
+    var products__openslider = new Swiper('.products-slider', {
+        loop: true,
+        breakpoints: {
+            765: {
+                slidesPerView: 1,
+                spaceBetween: 24,
+            },
+            800: {
+                slidesPerView: 1,
+                spaceBetween: 24,
+            },
+        },
+        // autoplay: {
+        //   delay: 2000,
+        //   speed: 5000,
+        //   disableOnInteraction: true,
+        // },
+    });
+}, []); // [] - для инициализа
 
   
   return (
       <>
         <div className="product__item">
-          <div className="products__slider-item">
-            <img src={product.img1} alt="" />
-          </div>
+          {window.innerWidth < 615 ? (
+            <div className="products__slider-item">
+              <img src={product.img1} alt="" />
+            </div>
+          ) : (
+            <div class="products__slider-item">
+              <div class="products-slider swiper">
+                <div class="products-slider-wrapper swiper-wrapper">
+                  <div class="product-slide swiper-slide">
+                    <img src={product.img1} alt="" class="products__slider-img" />
+                  </div>
+                  <div class="product-slide swiper-slide">
+                    <img src={product.img2} alt="" class="products__slider-img" />
+                  </div>
+                  <div class="product-slide swiper-slide">
+                    <img src={product.img3} alt="" class="products__slider-img" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
           <span className="product__price">{product.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} ₽</span>
           <Link  title={product.title} to={`/info_products/${product.id}`} className="products__titles">
             {product.title.length > 25
