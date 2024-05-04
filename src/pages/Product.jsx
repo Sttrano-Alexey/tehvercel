@@ -93,8 +93,11 @@ const Product = ({ product }) => {
 
   // Инициализация слайдера
 
+  
   useEffect(() => {
-    var products__openslider = new Swiper('.products-slider', {
+    const sliders = document.querySelectorAll('.products-slider');
+    sliders.forEach(item => {
+      let products__openslider = new Swiper(item, {
         loop: true,
         breakpoints: {
             765: {
@@ -106,11 +109,22 @@ const Product = ({ product }) => {
                 spaceBetween: 24,
             },
         },
+        navigation: {
+            nextEl: `.${item.classList[0]} .products-slider-next`,
+            prevEl: `.${item.classList[0]} .products-slider-prev`,
+        },
         // autoplay: {
         //   delay: 2000,
         //   speed: 5000,
         //   disableOnInteraction: true,
         // },
+      });
+      products__openslider.on('click', (swiper, e) => {
+        const el = e.target;
+        if (el.classList.contains('products-slider-next') || el.classList.contains('products-slider-prev')){
+          e.preventDefault();
+        }
+      });
     });
 }, []); // [] - для инициализа
 
@@ -136,6 +150,18 @@ const Product = ({ product }) => {
                     <img src={product.img3} alt="" class="products__slider-img" />
                   </div>
                 </div>
+              </div>
+              <div className="products-slider-nav">
+                <button className="products-slider-prev">
+                <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.22754 11.2974L0.988324 6.07407L6.22754 0.85078" stroke="black"/>
+                </svg>
+                </button>
+                <button className="products-slider-next">
+                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.16504 0.850708L6.40425 6.074L1.16504 11.2973" stroke="black"/>
+                </svg>
+                </button>
               </div>
             </div>
           )}
